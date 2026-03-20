@@ -1,0 +1,56 @@
+include ../_mixins/_all
+
+block vars
+  -title        = ''
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = ''
+  -path         = '.'
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, maximum-scale=1.0')
+    link(
+      href="//fonts.googleapis.com"
+      rel="preconnect"
+      )
+    link(
+      crossorigin=""
+      href="//fonts.gstatic.com"
+      rel="preconnect"
+      )
+    link(
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      )
+    link(rel='stylesheet' href=path+'/assets/fonts/UTMBebas/stylesheet.css')
+    link(rel='stylesheet' href=path+'/assets/js/library/swiper/swiper-bundle.min.css')
+    //- link(rel='stylesheet' href=path+'/assets/js/library/select2/select2.min.css')
+    link(rel='stylesheet' href=path+'/assets/css/style.min.css')
+    title Template
+
+  body(class=pageID)
+    include ../_modules/header
+    main.main#smooth-wrapper
+      #smooth-content
+        block container
+        include ../_modules/footer
+    //- script(src='./assets/js/library/jquery/jquery.js')
+    script(src="//cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js")
+    script(src="//cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js")
+    script(src="//cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js")
+    //- script(src="//cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js")
+    //- script(src='./assets/js/library/aos/aos.js')
+    script(src='./assets/js/library/swiper/swiper-bundle.min.js')
+    //- script(src='./assets/js/library/select2/select2.min.js')
+    //- script(src='./assets/js/library/infiniteslidev2/infiniteslidev2.min.js')
+    //- script(src='./assets/js/library/matchHeight/jquery.matchHeight.js')
+    script(src='./assets/js/index.min.js')
+    block scripts
+
+

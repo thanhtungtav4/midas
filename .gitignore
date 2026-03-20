@@ -1,0 +1,6 @@
+node_modules
+dist
+/dist
+template
+/template
+package-lock.json

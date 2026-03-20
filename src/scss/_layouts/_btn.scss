@@ -1,0 +1,50 @@
+.btn {
+  z-index: 1;
+  color: $color-second;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: $color-pri;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2.3rem 4rem;
+  font-family: var(--font-four);
+  @include fz-26;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  position: relative;
+  box-shadow: 10px 10px rgba(255, 178, 20, 0.3);
+  &--sec {
+    background-color: #fff;
+    box-shadow: 10px 10px rgba(#fff, 0.3);
+  }
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+  @include max(767px) {
+    padding: 1.6rem 2rem;
+    box-shadow: 6px 6px rgba(255, 178, 20, 0.3);
+  }
+  @include max(575px) {
+    padding: 1rem 2rem;
+  }
+  &--thir {
+    background: #3c3bdf;
+    color: #fff;
+    @include fz-24;
+    font-family: var(--font-thir);
+    font-weight: 400;
+    box-shadow: unset;
+    width: fit-content;
+    border-radius: 0.5rem;
+    padding: 1rem 1.6rem;
+    text-transform: none;
+    @include max(575px) {
+      padding: 0.4rem 1rem;
+      border-radius: 0.2rem;
+      font-size: 1.3rem;
+    }
+  }
+}

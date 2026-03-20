@@ -1,0 +1,14 @@
+.pagination
+  ul.page-numbers
+    li
+      +self("", "is-prev page-numbers is-disable")
+        +img("common/ico_next.svg")
+    li
+      span.page-numbers.is-current(aria-current='page') 1
+    li
+      +self("2", "page-numbers")
+    li
+      +self("3", "page-numbers")
+    li
+    +self("", "is-next page-numbers")
+      +img("common/ico_next.svg")

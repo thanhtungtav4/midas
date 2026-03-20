@@ -1,0 +1,102 @@
+.breadcrumb-list {
+  display: flex;
+  padding: 1.6rem 0;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
+.breadcrumb-item {
+  color: #FFF;
+  @include fz-16;
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+
+  white-space: nowrap;
+
+  @include max(524.98px) {
+    @include fz-12;
+  }
+
+  &:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    cursor: default;
+
+    a,
+    span {
+      padding-right: 0;
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &.is-current {
+    font-weight: 700;
+
+    a {
+      margin: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    @include transition;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+      background: url(../images/common/chevron-right.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 0.8rem;
+
+      @include max(980px) {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 0.4rem;
+      }
+    }
+
+    &:hover {
+      color: $color-pri;
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-breadcrumb {
+  .breadcrumb-list {
+    padding: 4.8rem 0;
+    display: flex;
+    justify-content: start;
+
+    @include max(768px) {
+      padding: 2.4rem 0;
+    }
+  }
+
+
+  .breadcrumb-item {
+    color: #15120A;
+
+    a {
+      &::after {
+        filter: invert(1);
+      }
+    }
+
+  }
+}

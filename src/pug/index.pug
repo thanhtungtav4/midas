@@ -1,0 +1,732 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -path         = '.'
+
+block scripts
+
+block container
+
+  section.hero.section
+    div(class="hero__gradient")
+    .container
+      p.js-text(class="hero__eyebrow" ) Vị thế tiên phong thăng hạng Website
+      h1.js-text(class="hero__title" )
+        | từ&nbsp;
+        span TOP 10 LÊN TOP 1
+        br
+        | &nbsp;& CHIẾM LĨNH&nbsp;
+        span AI OVERVIEW
+      p.js-text(class="hero__lead")
+        | Không dừng lại ở SEO truyền thống, Midas tiên phong ứng dụng GEO
+        |   (Generative Engine Optimization). Chúng tôi chuẩn hóa nền tảng
+        |   Technical, biến Website thành “Nguồn tin cậy” (Trusted Source) để
+        |   được AI ưu tiên lựa chọn trong kỷ nguyên Search 2026.
+      div.js-text(class="hero__actions")
+        a.btn(href="#")
+          span Đăng ký tư vấn SEO
+        a.btn.btn--sec(href="#")
+          span Báo giá dịch vụ
+      .hero__star.js-text
+        +img("common/star.svg")
+      .hero__lead.tt-25
+        blockquote.js-text(class="hero__quote tt-24")
+          | “Cốt lõi của MIDAS là sự học hỏi không ngừng để dẫn đầu. Chúng tôi
+          |   kết hợp giữa dữ liệu thực chiến và công nghệ GEO tiên phong để đảm
+          |   bảo rằng thương hiệu của bạn không chỉ lên Top, mà còn trở thành
+          |   nguồn tin cậy nhất trong mắt khách hàng.”
+        aside.js-text(
+          aria-label="Tác giả trích dẫn"
+          class="hero__author"
+          )
+          div(class="hero__author-card")
+            p(class="hero__author-name") Bảo Danh
+            p(class="hero__author-role") CEO of Midas Agency
+    figure.js-text(class="hero__team")
+      +img("common/team1.png")
+  section.about.section.is-decora
+    .container
+      article.about-card
+        h2.sec-tt.js-text CHÚNG TÔI LÀ MIDAS
+        p.tt-sub.js-text
+          span 6+ năm
+          | &nbsp;đồng hành cùng doanh nghiệp
+          br
+          | &nbsp;chinh phục&nbsp;
+          span top 1 - 3
+        p.js-text(class="about-card__body tt-24 t-ct")
+          | Chúng tôi sở hữu kinh nghiệm triển khai Marketing Online
+          br
+          | &nbsp;cho hơn
+          | 200 doanh nghiệp, bao gồm 30 lĩnh vực đa dạng như sức khoẻ, việc
+          | làm, đầu tư, định cư, thời trang, xây dựng, hàng không và điện
+          | máy, đảm bảo sự am hiểu sâu rộng và hiệu quả cao trong từng chiến
+          | dịch.
+  section.results.section.is-decora
+    .container
+      h2.sec-tt.js-text KẾT QUẢ THỰC - GIÁ TRỊ THỰC
+      .slider-wrapper.results-grid.js-text.js-result
+        +Swiperhtml
+          .swiper-slide
+            article.metric-card
+              +img("common/traffic.png")
+              h3.metric-tt 2M+
+              p Traffic/tháng
+          .swiper-slide
+            article.metric-card
+              +img("common/url.png")
+              h3.metric-tt 100N+
+              p URL hệ thống được tối ưu Technical
+          .swiper-slide
+            article.metric-card
+              +img("common/seo.png")
+              h3.metric-tt 200+
+              p Dự án SEO tổng thể thành công
+          .swiper-slide
+            article.metric-card
+              +img("common/b2b.png")
+              h3.metric-tt 6+ Năm
+              p Đồng hành cùng Doanh nghiệp B2B
+        .swiper-pagination.js-text
+      blockquote.js-text(class="results__quote")
+        | Chúng tôi vận hành dự án với tư duy của một đội ngũ In-house:
+        |   Trách nhiệm, Minh bạch và Quyết liệt với mục tiêu Doanh thu.
+  section.trust.section
+    .trust__wrap.js-text
+      .trust__txt
+        p Được khách hàng tin tưởng và đồng hành:
+      .trust__brand
+        ul.trust__brand-list.scroll1
+          each item, id in Array(10)
+            li.trust__brand-item
+              +img(`common/brand${id + 1}.png`)
+    .global.js-text
+      +img("common/global.jpg")
+
+  section.fields.section
+    .container
+      h2.sec-tt.js-text lĩnh vực & quy mô hoạt động
+      p.tt-25.t-ct.js-text Tại Midas, chúng tôi hiểu rằng mỗi doanh nghiệp đều có một bài toán tăng trưởng riêng. Dù mục tiêu của bạn là xây dựng niềm tin với Google hay tối ưu hiển thị trên các bộ máy AI, chúng tôi đều có lộ trình chuẩn xác để kết nối thương hiệu với người dùng cuối.
+      .fields__box.js-text
+        p.fields-tt Lĩnh vực hoạt động
+        .domains-grid.scroll2
+          each item, id in ["Y tế & Sức khỏe", 'Tài chính', 'Việc làm', 'Gia công & Xuất khẩu', 'Hàng không', 'Du lịch', 'Dịch vụ', 'Thời trang & Bán lẻ']
+            .domain-item
+              .domain-icon
+                +img(`common/domain${id + 1}.png`)
+              p=item
+      .fields__box.js-text
+        p.fields-tt LOẠI HÌNH DOANH NGHIỆP
+        .business-types
+          .business-item
+            .business-card
+              .mona-content
+                p
+                  strong Tập đoàn lớn (Enterprise)
+                  | &nbsp;Thường doanh nghiệp lớn đầu ngành, muốn có lượng traffic thật lớn, muốn được xếp hạng top 1-3 trên Google Search và Google Maps.
+                  | &nbsp;Chúng tôi giúp doanh nghiệp lớn tăng traffic & chuyển đổi hiệu quả thông qua chiến lược SEO dài hạn, content chất lượng và backlink uy tín.
+              a(href="#").btn.btn--thir
+                span Tìm hiểu thêm
+          .business-item
+            .business-card
+              .mona-content
+                p
+                  strong Doanh nghiệp Startup
+                  | &nbsp;Thích hợp với startup đang tăng trưởng nhanh, cần traffic chất lượng cao, chi phí hợp lý, tập trung vào từ khóa ngách và chuyển đổi nhanh.
+                  | &nbsp;Chúng tôi giúp Startup tiếp cận người dùng mục tiêu thông qua SEO, Google Ads, content marketing và tối ưu trải nghiệm người dùng.
+              a(href="#").btn.btn--thir
+                span Tìm hiểu thêm
+          .business-item
+            .business-card
+              .mona-content
+                p
+                  strong Doanh nghiệp Startup
+                  | &nbsp;Thích hợp với startup đang tăng trưởng nhanh, cần traffic chất lượng cao, chi phí hợp lý, tập trung vào từ khóa ngách và chuyển đổi nhanh.
+                  //- | &nbsp;Chúng tôi giúp Startup tiếp cận người dùng mục tiêu thông qua SEO, Google Ads, content marketing và tối ưu trải nghiệm người dùng.
+              a(href="#").btn.btn--thir
+                span Tìm hiểu thêm
+  section.services.section
+    .container
+      h2.sec-tt.js-text hệ sinh thái&nbsp;
+        span seo chuyên sâu
+      p.tt-25.t-ct.js-text Midas hướng đến việc đưa thương hiệu trở thành nguồn tin cậy được các bộ não AI ưu tiên đề xuất, đảm bảo sự tăng trưởng bền vững và minh bạch nhất cho doanh nghiệp.
+      .business-types.js-text
+        .business-item
+          .business-card
+            p.services-tt 1.Dịch vụ SEO
+            .mona-content
+              p Với&nbsp;
+                strong 6 năm
+                | &nbsp;thực chiến Global, MIDAS cam kết đưa Website chiếm lĩnh&nbsp;
+                strong TOP 1-3 Google,
+                | &nbsp;tạo ra&nbsp;
+                strong 2 triệu traffic
+                | &nbsp;mỗi tháng. Giải pháp tập trung tối ưu lợi ích và chuyển đổi doanh thu thực tế cho doanh nghiệp.
+            .mona-content.is-toggle
+              p Thiết kế mô hình Content Funnel độc quyền giúp dẫn dắt khách hàng từ nhận biết đến hành vi mua hàng. MIDAS kiến tạo uy tín (Authority),&nbsp;
+                strong tối ưu doanh thu đa kênh
+                | &nbsp;và mang lại&nbsp;
+                strong tỷ lệ chuyển đổi vượt trội cho bạn.
+            a(href="#").btn.btn--thir
+              span Tìm hiểu thêm
+        .business-item
+          .business-card
+            p.services-tt 2.Dịch vụ SEO AI (GEO)
+            .mona-content
+              p Đón đầu kỷ nguyên&nbsp;
+                strong AI Search,
+                | &nbsp;giúp Website không chỉ xuất hiện trên top tìm kiếm mà còn trở thành&nbsp;
+                strong nguồn tin cậy
+                | &nbsp;được đề xuất trên ChatGPT, Gemini và Perplexity. Đây là giải pháp đột phá để thương hiệu chiếm lĩnh thị phần traffic mới từ các mô hình LLMs.
+            .mona-content.is-toggle
+              p Thiết kế mô hình Content Funnel độc quyền giúp dẫn dắt khách hàng từ nhận biết đến hành vi mua hàng. MIDAS kiến tạo uy tín (Authority),&nbsp;
+                strong tối ưu doanh thu đa kênh
+                | &nbsp;và mang lại&nbsp;
+                strong tỷ lệ chuyển đổi vượt trội cho bạn.
+            a(href="#").btn.btn--thir
+              span Tìm hiểu thêm
+        .business-item
+          .business-card
+            p.services-tt 3.Dịch vụ SEO Strategy
+            .mona-content
+              p MIDAS tháo gỡ mọi nút thắt "SEO kém hiệu quả" chỉ trong&nbsp;
+                strong 7-10 ngày
+                | &nbsp;bằng lộ trình Audit chuyên sâu. Chúng tôi thiết lập Action Plan "đo ni đóng giày" giúp doanh nghiệp làm chủ sự&nbsp;
+                strong tăng trưởng bền vững và dài hạn.
+            .mona-content.is-toggle
+              p Thiết kế mô hình Content Funnel độc quyền giúp dẫn dắt khách hàng từ nhận biết đến hành vi mua hàng. MIDAS kiến tạo uy tín (Authority),&nbsp;
+                strong tối ưu doanh thu đa kênh
+                | &nbsp;và mang lại&nbsp;
+                strong tỷ lệ chuyển đổi vượt trội cho bạn.
+            a(href="#").btn.btn--thir
+              span Tìm hiểu thêm
+        .business-item
+          .business-card
+            p.services-tt 4.Dịch vụ Content Marketing
+            .mona-content
+              p Thiết kế mô hình Content Funnel độc quyền giúp dẫn dắt khách hàng từ nhận biết đến hành vi mua hàng. MIDAS kiến tạo uy tín (Authority),&nbsp;
+                strong tối ưu doanh thu đa kênh
+                | &nbsp;và mang lại&nbsp;
+                strong tỷ lệ chuyển đổi vượt trội cho bạn.
+            .mona-content.is-toggle
+              p Thiết kế mô hình Content Funnel độc quyền giúp dẫn dắt khách hàng từ nhận biết đến hành vi mua hàng. MIDAS kiến tạo uy tín (Authority),&nbsp;
+                strong tối ưu doanh thu đa kênh
+                | &nbsp;và mang lại&nbsp;
+                strong tỷ lệ chuyển đổi vượt trội cho bạn.
+            a(href="#").btn.btn--thir
+              span Tìm hiểu thêm
+        .business-item
+          .business-card
+            p.services-tt 5.Midas Academy
+            .mona-content
+              p Đào tạo&nbsp;
+                strong tư duy chiến lược thực chiến từ
+                | &nbsp;Entry đến Unlocked nâng cao. Học viên nắm vững kỹ năng Audit toàn diện, tự tay xây dựng bộ từ khóa "WIN" và lập Action Plan 6-12 tháng để&nbsp;
+                strong đưa Website lên Top.
+            .mona-content.is-toggle
+              p Thiết kế mô hình Content Funnel độc quyền giúp dẫn dắt khách hàng từ nhận biết đến hành vi mua hàng. MIDAS kiến tạo uy tín (Authority),&nbsp;
+                strong tối ưu doanh thu đa kênh
+                | &nbsp;và mang lại&nbsp;
+                strong tỷ lệ chuyển đổi vượt trội cho bạn.
+            a(href="#").btn.btn--thir
+              span Tìm hiểu thêm
+  a(href="#").global.js-text
+    +img("common/global1.jpg")
+  section.process.section
+    .container
+      h2.sec-tt.t-ct.js-text
+        | MIDAS GIÚP BẠN&nbsp;
+        span NHƯ THẾ NÀO?
+      p.tt-24.t-ct.js-text Quy trình làm việc chuẩn để MIDAS Agency giúp khách hàng hiện diện bền vững trên Search Engines & AI
+      .c-timeline
+        .c-timeline_progress
+          .c-timeline_progress-bar
+        each item in Array(4)
+          .c-timeline_item
+            .c-wrap
+              .c-wrap.cc-timeline_item
+                p.timeline-step 01.
+                p.timeline-tt Thiết lập nền tảng & Audit triệt để
+            .c-wrap.cc-align_center
+              .timeline_circle
+            .c-wrap
+              .c-card
+                .timeline-box
+                  .mona-content
+                    p
+                      strong Phương án:
+                      | &nbsp;Phân tích đối thủ và nghiên cứu thị trường chuyên sâu để tháo gỡ nút thắt "SEO không hiệu quả".
+                    p
+                      strong Phương án:
+                      | &nbsp;Phân tích đối thủ và nghiên cứu thị trường chuyên sâu để tháo gỡ nút thắt "SEO không hiệu quả".
+
+  section.visual-banner.visual-banner--markets(aria-label="Khu vực MIDAS đã triển khai")
+    img(
+      loading="lazy"
+      height="441"
+      width="1576"
+      alt="Khu vực MIDAS đã triển khai dịch vụ"
+      src="assets/images/image21.png"
+      )
+  section.reasons.section(aria-labelledby="reasons-title")
+    .container
+      h2#reasons-title.sec-tt
+        | VÌ SAO BẠN NÊN
+        span CHỌN MIDAS?
+      p.section-copy
+        | Không chỉ dừng lại ở Top 1 Google, MIDAS thiết lập chuẩn mực mới
+        |   bằng việc tối ưu hóa hiển thị trên các nền tảng Generative AI
+        |   (GEO), giúp thương hiệu dẫn đầu kỷ nguyên tìm kiếm thông minh.
+      .reasons-grid
+        article.reason-card.reason-card--geo
+          h3 TIÊN PHONG GEO
+          p Agency đầu tiên tại VN tập trung tối ưu cho Generative AI.
+        article.reason-card.reason-card--data
+          h3 DATA - DRIVEN
+          p Mọi quyết định dựa trên dữ liệu, không dựa trên cảm tính.
+        article.reason-card.reason-card--house
+          h3 TƯ DUY IN HOUSE
+          p
+            | Làm việc như nhân sự nội bộ của khách hàng: Trách nhiệm &
+            |   Minh bạch.
+        article.reason-card.reason-card--clear
+          h3 CAM KẾT MINH BẠCH
+          p Báo cáo Real-time, khách hàng nắm rõ từng đồng ngân sách đi về đâu.
+  section#projects.projects.section(aria-labelledby="projects-title")
+    .container
+      h2#projects-title.sec-tt DỰ ÁN NỔI BẬT
+      .projects-grid
+        article.project-card
+          figure(class="project-card__media")
+            img(
+              loading="lazy"
+              height="222"
+              width="406"
+              alt="Case study VietnamWorks"
+              src="assets/images/project-1.png"
+              )
+          div(class="project-card__body")
+            p(class="project-card__brand") VietnamWorks
+            h3 Tăng trưởng organic sessions bền vững cho nền tảng tuyển dụng dẫn đầu.
+            ul(class="project-card__stats")
+              li
+                strong Lĩnh vực:
+                | Tuyển dụng
+              li
+                strong Mô hình:
+                | B2C
+              li
+                strong Sessions:
+                | 2.000.000+/tháng
+              li
+                strong Keyword:
+                | Việc làm top 1-2
+            a.button.button--project(href="#lead-form") Xem case study
+        article.project-card.project-card--wide
+          figure(class="project-card__media")
+            img(
+              loading="lazy"
+              height="218"
+              width="426"
+              alt="Case study Phong Vũ"
+              src="assets/images/project-2.png"
+              )
+          div(class="project-card__body")
+            p(class="project-card__brand") Phong Vũ
+            h3 Đồng hành cùng hệ thống bán lẻ công nghệ trên hành trình mở rộng organic traffic.
+            ul(class="project-card__stats")
+              li
+                strong Lĩnh vực:
+                | Bán lẻ điện máy
+              li
+                strong Mô hình:
+                | B2C
+              li
+                strong Sessions:
+                | 1.200.000+/tháng
+              li
+                strong Keyword:
+                | Laptop, phụ kiện top 3-5
+            a.button.button--project(href="#lead-form") Xem case study
+        article.project-card
+          figure(class="project-card__media")
+            img(
+              loading="lazy"
+              height="218"
+              width="406"
+              alt="Case study MFast"
+              src="assets/images/project-3.png"
+              )
+          div(class="project-card__body")
+            p(class="project-card__brand") MFast
+            h3 Tăng trưởng gấp 12 lần traffic tự nhiên cho hệ sinh thái tài chính số.
+            ul(class="project-card__stats")
+              li
+                strong Lĩnh vực:
+                | Tài chính
+              li
+                strong Mô hình:
+                | B2C
+              li
+                strong Traffic:
+                | x12 từ 10.000 lên 120.000+/tháng
+              li
+                strong Keyword:
+                | MMO, kiếm tiền online top 1-3
+            a.button.button--project(href="#lead-form") Xem case study
+  section.testimonials.section(aria-labelledby="testimonials-title")
+    .container
+      h2#testimonials-title.sec-tt KHÁCH HÀNG NÓI GÌ VỀ MIDAS
+      .testimonials-grid
+        article.testimonial-card
+          div(class="testimonial-card__top")
+            img(
+              loading="lazy"
+              height="125"
+              width="285"
+              alt="Phong Vũ"
+              src="assets/images/testimonial-phongvu-logo.png"
+              )
+          p(class="testimonial-card__quote-mark") “
+          p(class="testimonial-card__body")
+            | Tôi đánh giá cao sự chuyên nghiệp của đội ngũ SEO MIDAS. Họ sở
+            |   hữu chuyên môn cao, thể hiện qua khả năng phân tích kỹ lưỡng, đề
+            |   xuất chiến lược toàn diện và chi tiết, cùng với việc triển khai
+            |   chiến lược rõ ràng và hiệu quả.
+          p(class="testimonial-card__name") Vũ Trọng Nhân
+          p(class="testimonial-card__meta") Project Manager SEO Phong Vũ
+          p(
+            aria-label="5 sao"
+            class="testimonial-card__stars"
+            ) ★★★★★
+        article.testimonial-card.testimonial-card--mfast
+          div(class="testimonial-card__top")
+            img(
+              loading="lazy"
+              height="125"
+              width="305"
+              alt="MFast"
+              src="assets/images/testimonial-mfast-logo-large.png"
+              )
+          p(class="testimonial-card__quote-mark") “
+          p(class="testimonial-card__body")
+            | Tôi hoàn toàn tin tưởng vào chiến lược và hướng đi mà Midas đã
+            |   vạch ra cho website Mfast, tin rằng sẽ đạt và vượt KPI đề ra,
+            |   hướng đến mục tiêu 100.000 lượt truy cập mỗi tháng.
+          p(class="testimonial-card__name") Nguyễn Huy Hoàng
+          p(class="testimonial-card__meta") Head of Marketing
+          p(
+            aria-label="5 sao"
+            class="testimonial-card__stars"
+            ) ★★★★★
+        article.testimonial-card.testimonial-card--vnw
+          div(class="testimonial-card__top testimonial-card__top--compact")
+            img(
+              loading="lazy"
+              height="61"
+              width="233"
+              alt="VietnamWorks"
+              src="assets/images/testimonial-vietnamworks-logo.png"
+              )
+          p(class="testimonial-card__quote-mark") “
+          p(class="testimonial-card__body")
+            | Dịch vụ tư vấn SEO của Midas thật sự hiệu quả. Không chỉ có kiến
+            |   thức sâu rộng về SEO mà còn biết cách áp dụng linh hoạt vào nhu
+            |   cầu cụ thể của dự án. Đội ngũ luôn cập nhật và đề xuất các chiến
+            |   lược mới để duy trì hiệu suất tổng thể.
+          p(class="testimonial-card__name") Dennis Thiện
+          p(class="testimonial-card__meta") Lead Project Manager SEO VietnamWorks
+          p(
+            aria-label="5 sao"
+            class="testimonial-card__stars"
+            ) ★★★★★
+      img.section-dots(
+        height="15"
+        width="188"
+        alt=""
+        src="assets/images/testimonials-sticker.png"
+        )
+  section.press.section(aria-labelledby="press-title")
+    .container
+      p(class="press__label") Được khách hàng tin tưởng và đồng hành:
+      h2#press-title.sec-tt BÁO CHÍ NÓI GÌ VỀ MIDAS
+      div(class="press__brand")
+        img(
+          loading="lazy"
+          height="189"
+          width="336"
+          alt="VietnamWorks"
+          src="assets/images/press-brand.png"
+          )
+      article.press-article
+        figure(class="press-article__media")
+          img(
+            loading="lazy"
+            height="330"
+            width="634"
+            alt="Báo VTC News"
+            src="assets/images/press-1.png"
+            )
+        div(class="press-article__copy")
+          p(class="press-article__excerpt")
+            | “MIDAS Agency đang dẫn đầu cuộc cách mạng SEO 2026, giúp doanh
+            |   nghiệp không chỉ lên Top mà còn trở thành ‘Trusted Source’ được
+            |   Google AI ưu tiên đề xuất trong kỷ nguyên Zero-Click.”
+            span — Báo VTC News
+          p(class="press-article__source")
+            | Nguồn: Midas Agency: Giải mã Zero-Click, đưa Website thành nguồn
+            |   tin cậy của Google AI
+      article.press-article.press-article--reverse
+        div(class="press-article__copy")
+          p(class="press-article__excerpt")
+            | “Tiên phong giải pháp GEO, MIDAS Agency giúp thương hiệu định
+            |   hình lại chiến lược nhận diện và đảm bảo sự hiện diện bền vững
+            |   trong hệ sinh thái AI Search.”
+            span — Báo Diễn đàn Doanh nghiệp (VCCI)
+          p(class="press-article__source")
+            | Nguồn: Midas Agency: Tiên phong GEO, giúp Website được trích dẫn
+            |   trên AI Search
+        figure(class="press-article__media")
+          img(
+            loading="lazy"
+            height="372"
+            width="668"
+            alt="Báo Diễn đàn Doanh nghiệp"
+            src="assets/images/press-2.png"
+            )
+      img.section-dots(
+        height="13"
+        width="162"
+        alt=""
+        src="assets/images/press-sticker.png"
+        )
+  section.visual-banner.visual-banner--ready(aria-label="Sẵn sàng lên Top 1-3")
+    img(
+      loading="lazy"
+      height="385"
+      width="1478"
+      alt="Bạn đã sẵn sàng lên Top 1-3 Google?"
+      src="assets/images/midas-bg-press.png"
+      )
+  section#lead-form.lead.section(aria-labelledby="lead-title")
+    .container(class="lead__container")
+      h2#lead-title.sec-tt(class="lead__title")
+        | XÂY DỰNG HỆ THỐNG SEO BỀN VỮNG
+        span - TOP #1 AI OVERVIEW
+      blockquote(class="lead__quote")
+        | Đừng để doanh nghiệp bị bỏ lại trong kỷ nguyên tìm kiếm bằng AI.
+        |   Hãy để Midas giúp bạn làm chủ cuộc chơi.
+      form.lead-form(
+        method="post"
+        action="/"
+        )
+        div(class="lead-form__row lead-form__row--three")
+          label
+            span Tên
+            input(
+              required=""
+              autocomplete="name"
+              name="name"
+              type="text"
+              )
+          label
+            span SĐT
+            input(
+              required=""
+              autocomplete="tel"
+              name="phone"
+              type="tel"
+              )
+          label
+            span Email
+            input(
+              required=""
+              autocomplete="email"
+              name="email"
+              type="email"
+              )
+        div(class="lead-form__row")
+          label
+            span Domain website
+            input(
+              autocomplete="url"
+              name="domain"
+              type="text"
+              )
+        div(class="lead-form__row")
+          label
+            span Nhu cầu
+            textarea(
+              rows="1"
+              name="needs"
+              )
+        button.button.button--lead(type="submit") NHẬN TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
+  section.gallery.section(aria-labelledby="gallery-title")
+    .gallery-grid(aria-label="Hình ảnh hoạt động của MIDAS")
+      h2#gallery-title.sr-only Gallery
+      figure.gallery-item.gallery-item--1
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-8.png"
+          )
+      figure.gallery-item.gallery-item--2
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-9.png"
+          )
+      figure.gallery-item.gallery-item--3
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-1.png"
+          )
+      figure.gallery-item.gallery-item--4
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-3.png"
+          )
+      figure.gallery-item.gallery-item--5
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-10.png"
+          )
+      figure.gallery-item.gallery-item--6
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-11.png"
+          )
+      figure.gallery-item.gallery-item--7
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-2.png"
+          )
+      figure.gallery-item.gallery-item--8
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-12.png"
+          )
+      figure.gallery-item.gallery-item--9
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-5.png"
+          )
+      figure.gallery-item.gallery-item--10
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-4.png"
+          )
+      figure.gallery-item.gallery-item--11
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-6.png"
+          )
+      figure.gallery-item.gallery-item--12
+        img(
+          loading="lazy"
+          alt=""
+          src="assets/images/gallery-7.png"
+          )
+  section.industries.section(aria-labelledby="industries-title")
+    .container
+      h2#industries-title.sec-tt LĨNH VỰC HOẠT ĐỘNG
+      div(class="industries__rule")
+      .industries-grid
+        article.industry-column
+          h3 Các lĩnh vực dịch vụ & Đời sống
+          ul
+            li Y tế & Sức khỏe
+            li Đầu tư & Tài chính
+            li Giáo dục & Việc làm
+            li Công nghiệp & Xây dựng
+            li Hàng không & Du lịch
+            li Thời trang & Bán lẻ
+        article.industry-column
+          h3 Các lĩnh vực Công nghệ & Phần mềm
+          ul
+            li Martech & AdTech
+            li Fintech & Cybersecurity
+            li E-commerce & CMS Platforms
+            li AI Platforms & Automation
+            li Business Software
+            li Phần mềm chuyên dụng, CSKH
+            li Biotech
+        article.industry-column
+          h3 Thế mạnh cốt lõi
+          ul
+            li Tiên phong GEO
+            li SEO Chuyên sâu
+            li Content Marketing
+            li Đào tạo SEO
+  section#faq.faq.section(aria-labelledby="faq-title")
+    .container(class="faq__container")
+      h2#faq-title.sec-tt CÂU HỎI THƯỜNG GẶP
+      details.faq-item(open="")
+        summary
+          span MIDAS khác biệt với các agency SEO khác như thế nào?
+          span(
+            aria-hidden="true"
+            class="faq-item__icon"
+            ) +
+        p
+          | MIDAS hoạt động như 1 đội ngũ in-house của khách hàng. Mục tiêu
+          |   của chúng tôi là đồng hành cùng khách hàng trên hành trình tối ưu
+          |   ROI, tăng trưởng bền vững và bứt phá doanh thu.
+      details.faq-item
+        summary
+          span MIDAS sẽ hỗ trợ như một phần của team in-house của tôi như thế nào?
+          span(
+            aria-hidden="true"
+            class="faq-item__icon"
+            ) +
+        p
+          | Đội ngũ MIDAS phối hợp trực tiếp với team nội bộ, chia sẻ dashboard
+          |   real-time và duy trì chế độ cập nhật định kỳ để mọi đầu việc đều rõ
+          |   tiến độ, trách nhiệm và mục tiêu.
+      details.faq-item
+        summary
+          span Ai sẽ là người trực tiếp quản lý và triển khai dự án SEO tại MIDAS?
+          span(
+            aria-hidden="true"
+            class="faq-item__icon"
+            ) +
+        p
+          | Mỗi dự án được dẫn dắt bởi Project Manager và đội ngũ specialist
+          |   chuyên trách theo từng hạng mục Technical SEO, Content và GEO.
+      details.faq-item
+        summary
+          span MIDAS cam kết gì về số lượng và chất lượng dự án mỗi năm?
+          span(
+            aria-hidden="true"
+            class="faq-item__icon"
+            ) +
+        p
+          | MIDAS ưu tiên chất lượng triển khai và sự đồng hành dài hạn, vì
+          |   vậy số lượng dự án tiếp nhận luôn được kiểm soát để đảm bảo mức độ
+          |   chăm sóc chuyên sâu cho từng thương hiệu.
+      details.faq-item
+        summary
+          span Làm thế nào tôi có thể trao đổi và hợp tác với MIDAS trong quá trình làm việc?
+          span(
+            aria-hidden="true"
+            class="faq-item__icon"
+            ) +
+        p
+          | MIDAS linh hoạt trao đổi qua họp định kỳ, nhóm làm việc riêng và
+          |   các kênh liên lạc trực tiếp để đảm bảo thông tin minh bạch, phản
+          |   hồi nhanh và phối hợp chặt chẽ.

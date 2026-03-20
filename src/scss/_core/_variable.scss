@@ -1,0 +1,21 @@
+:root {
+  --font-pri: "Google Sans", sans-serif;
+  --font-sec: "Inter", sans-serif;
+  --font-thir: "Oswald", sans-serif;
+  --font-four: "UTM Bebas", sans-serif;
+  --size-hd: 10rem;
+  //==========
+}
+
+$color-pri: #ffb214;
+$color-second: #000;
+$color-thir: #fafafa;
+$color-sec: #f0f0f0;
+
+$header: 7.5rem;
+
+@mixin max($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}

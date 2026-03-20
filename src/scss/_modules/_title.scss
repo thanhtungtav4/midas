@@ -1,0 +1,94 @@
+.sec-tt {
+  font-family: var(--font-thir);
+  @include fz-70;
+  color: #3c3bdf;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    color: $color-pri;
+  }
+}
+.section {
+  padding: 5rem 0;
+  overflow: hidden;
+  @include max(991px) {
+    padding: 4rem 0;
+  }
+  @include max(575px) {
+    padding: 3rem 0;
+  }
+}
+.tt-sub {
+  text-align: center;
+  font-weight: 500;
+  @include fz-45;
+  text-transform: uppercase;
+  span {
+    color: #3c3bdf;
+  }
+  @include max(575px) {
+    br {
+      display: none;
+    }
+  }
+}
+.tt-24 {
+  @include fz-24;
+}
+.tt-25 {
+  @include fz-25;
+}
+.t-ct {
+  text-align: center;
+}
+.is-decora {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 17%;
+    height: 4px;
+    @include bgImage;
+    background-image: url("../images/common/line.svg");
+    @include max(575px) {
+      height: 1px;
+      width: 24%;
+    }
+  }
+}
+.slider-wrapper {
+  position: relative;
+  &:has(.swiper-pagination-bullet) {
+    padding-bottom: 3rem;
+  }
+  .swiper-pagination {
+    bottom: 0;
+    &-bullet {
+      opacity: 1;
+      background: #d9d9d9;
+      width: 4px;
+      height: 4px;
+      margin: 0 2px !important;
+      &-active {
+        background: #3c3bdf;
+      }
+    }
+  }
+}
+.scroll1 {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

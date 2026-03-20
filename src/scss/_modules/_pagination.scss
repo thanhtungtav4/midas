@@ -1,0 +1,65 @@
+.pagination-pri {
+  margin-top: 2.4rem;
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  .page-numbers {
+    color: #999;
+    text-align: center;
+    @include fz-16;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include transition;
+    gap: 0;
+    border-radius: 50%;
+
+    &.current {
+      color: #fff;
+      background: #D5B266;
+    }
+
+
+
+    &:hover {
+      color: #fff;
+      background: #D5B266;
+    }
+
+    &.is-current {
+      color: $color-second;
+    }
+
+    &.prev,
+    &.next {
+
+      .page-number {
+        display: flex;
+      }
+
+      img {
+        @include box(1.6rem);
+      }
+
+    }
+
+    &.prev {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &.is-disable {
+      display: none;
+    }
+  }
+}

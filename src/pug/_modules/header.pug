@@ -1,0 +1,17 @@
+header.header.js-header#header
+  .container
+    .header-wrap
+      .header-logo
+        +img("common/logo.png")
+      .header-main
+        nav.header-nav.js-header-nav
+          ul.menu-list
+            each item, id in ['Trang Chủ','Dịch Vụ', 'Case Study', 'Về Chúng Tôi', 'Tuyển  Dụng', 'Kiến Thức SEO Và AI' ]
+              li.menu-item(class=`${id === 0 ? "current-menu-item" : ""} `)
+                a(href="#")=item
+        .header-action
+          a(href="#").header-btn
+            span.hide-sitename NHẬN TƯ VẤN
+            +img("common/header-btn.png")
+          .menu-bar.js-bar
+            .menu-icon

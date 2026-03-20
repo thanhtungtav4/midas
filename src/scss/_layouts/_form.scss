@@ -1,0 +1,292 @@
+.form {
+  &-wrap {
+    display: flex;
+    row-gap: 2.4rem;
+    flex-direction: column;
+  }
+
+  &-mr {
+    margin: 0 -1rem;
+  }
+
+  &-group {
+    row-gap: 2.4rem;
+    position: relative;
+    @include flex;
+
+    label {
+      width: 100%;
+      display: block;
+      position: relative;
+
+      .text-m {
+        display: block;
+        margin-bottom: 0.8rem;
+      }
+
+      .text-m {
+        span {
+          color: #eb2121;
+        }
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 15rem;
+    }
+
+    input,
+    textarea {
+      outline: 0;
+      width: 100%;
+      user-select: none;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+      padding: 1.45rem 1.2rem;
+      background-color: white;
+      font-family: var(--font-pri);
+      border: 0.1rem solid #F0F0F0;
+      @include transition;
+
+      &:hover,
+      &:focus {
+        border-color: $color-sec;
+      }
+
+      &::placeholder {
+        color: #999999;
+      }
+    }
+
+    .date {
+      user-select: none;
+      position: relative;
+
+      &-picker {
+        top: 50%;
+        right: 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        position: absolute;
+        pointer-events: none;
+        transform: translate(0, -50%);
+      }
+
+      input {
+        cursor: pointer;
+      }
+    }
+
+    .select2-container {
+      width: 100% !important;
+
+      .select2-selection--single {
+        height: auto;
+        background-color: #fafafa;
+        border: 0.1rem solid $color-pri;
+        @include transition;
+
+        &:hover,
+        &:focus {
+          border-color: $color-sec;
+        }
+      }
+
+      .select2-selection__rendered {
+        color: #15120A;
+        padding: 0.6rem 1.6rem;
+        @include transition;
+      }
+
+      .select2-selection__arrow {
+        top: 50%;
+        right: 1.6rem;
+        transform: translate(0, -50%);
+      }
+
+      &--below {
+        .select2-selection__rendered {
+          color: #15120A;
+        }
+      }
+    }
+
+    @include max(575.98px) {
+      row-gap: 1.6rem;
+    }
+  }
+
+  &-box {
+    padding: 0 1rem;
+    width: calc(100% / 2);
+
+    @include max(500px) {
+      width: 100%;
+    }
+  }
+
+  &-action {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.daterangepicker {
+  user-select: none;
+
+  &.show-calendar {
+    .drp-buttons {
+      justify-content: flex-end;
+      @include flex-icenter;
+    }
+
+    .cancelBtn {
+      color: $color-sec;
+      background-color: white;
+      border: 0.1rem solid $color-sec;
+    }
+  }
+
+  td.active {
+    background-color: $color-sec;
+
+    &:hover {
+      background-color: #15120A;
+    }
+  }
+
+  td.availabel {
+    background-color: #15120A;
+  }
+}
+
+.password-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1.6rem;
+  width: fit-content;
+  bottom: 1.1rem;
+
+  .icon-show,
+  .icon-hide {
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    padding-left: 0.4rem;
+    box-sizing: content-box;
+    @include box(2.4rem);
+  }
+
+  img {
+    @include box(2.4rem);
+  }
+
+  .icon-hide {
+    display: none;
+  }
+
+  &.is-active {
+    .icon-show {
+      display: none;
+    }
+
+    .icon-hide {
+      display: block;
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  // margin-bottom: 1.6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // min-height: 2rem;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      &~.checkmark {
+        background: #000;
+
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  top: 0.2rem;
+  left: 0;
+  height: 1.6rem;
+  border: 1px solid #000;
+  width: 1.6rem;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0.4rem;
+    top: 0.1rem;
+    width: 0.4rem;
+    height: 0.8rem;
+    border: solid #fff;
+    border-width: 0 0.28rem 0.28rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.form-cf {
+  gap: 1rem;
+  justify-content: space-between;
+  @include flex-icenter;
+
+  .checkbox {
+    padding-left: 2.4rem;
+  }
+}
+
+.forget-txt {
+  @include transition;
+
+  &:hover {
+    color: #eb2121;
+    text-decoration: underline;
+  }
+}
+
+.cartifpage,
+.accountpage {
+  .select2-dropdown {
+    border: 0.1rem solid $color-pri;
+  }
+
+  .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: $color-sec;
+  }
+}
