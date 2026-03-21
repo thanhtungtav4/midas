@@ -43,6 +43,16 @@
 }
 .is-decora {
   position: relative;
+  padding-bottom: 8rem;
+  & + .section {
+    padding-top: 8rem;
+  }
+  @include max(575px) {
+    padding-bottom: 4rem;
+    & + .section {
+      padding-top: 4rem;
+    }
+  }
   &::after {
     position: absolute;
     bottom: 0;
