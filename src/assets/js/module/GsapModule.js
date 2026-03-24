@@ -13,7 +13,7 @@ export default function GsapModule() {
     // ===== Text fade-in khi scroll (scroll lên xuống đều chạy) =====
     gsap.utils.toArray(".js-text").forEach((el, i) => {
       gsap.from(el, {
-        y: -50,
+        y: -60,
         opacity: 0,
         duration: 1,
         stagger: 0.1, // delay theo từng section

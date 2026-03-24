@@ -1,14 +1,11 @@
 export default function gallery() {
-    $('.gallery').each(function() {
-        const $this = $(this);
-        const $item = $this.find('.gItem');
-        $(function() {
-            $this.lightGallery({
-                selector: $item,
-                thumbnail: true,
-                zoom: true,
-            });
-        });
+  const gallerys = document.querySelectorAll(".js-gallery");
+  if (!gallerys.length) return;
+  gallerys.forEach((gallery) => {
+    lightGallery(gallery, {
+      selector: ".gItem",
+      thumbnail: true,
+      zoom: true,
     });
-
+  });
 }

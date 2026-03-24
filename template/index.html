@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Oswald:wght@200..700&amp;display=swap">
     <link rel="stylesheet" href="./assets/fonts/UTMBebas/stylesheet.css">
     <link rel="stylesheet" href="./assets/js/library/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/js/library/gallery/lightgallery.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <title>Template</title>
   </head>
@@ -440,8 +441,8 @@
         </section>
         <section class="projects section is-decora">
           <div class="container">
-            <h2 class="sec-tt t-ct">DỰ ÁN NỔI BẬT</h2>
-            <div class="projects-slider slider-wrapper js-projects">
+            <h2 class="sec-tt t-ct js-text">DỰ ÁN NỔI BẬT</h2>
+            <div class="projects-slider slider-wrapper js-projects js-text">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -527,8 +528,8 @@
         </section>
         <section class="testimonials section is-decora">
           <div class="container">
-            <h2 class="sec-tt t-ct">KHÁCH HÀNG NÓI GÌ VỀ MIDAS</h2>
-            <div class="projects-slider slider-wrapper js-testimonial">
+            <h2 class="sec-tt t-ct js-text">KHÁCH HÀNG NÓI GÌ VỀ MIDAS</h2>
+            <div class="projects-slider slider-wrapper js-testimonial js-text">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -644,8 +645,8 @@
         </section>
         <section class="press section">
           <div class="container">
-            <h2 class="t-ct sec-tt">BÁO CHÍ NÓI GÌ VỀ MIDAS</h2>
-            <div class="projects-slider slider-wrapper js-press">
+            <h2 class="t-ct sec-tt js-text">BÁO CHÍ NÓI GÌ VỀ MIDAS</h2>
+            <div class="projects-slider slider-wrapper js-press js-text">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -724,54 +725,59 @@
             </div>
           </div>
         </section><a class="global js-text" href="#"><img src="./assets/images/common/global2.jpg" alt="" title="" loading="lazy"></a>
-        <section class="lead section" id="lead-form" aria-labelledby="lead-title">
-          <div class="container lead__container">
-            <h2 class="sec-tt lead__title" id="lead-title">XÂY DỰNG HỆ THỐNG SEO BỀN VỮNG<span>- TOP #1 AI OVERVIEW</span></h2>
-            <blockquote class="lead__quote">
+        <section class="lead section">
+          <div class="container">
+            <h2 class="js-text t-ct sec-tt">XÂY DỰNG HỆ THỐNG SEO BỀN VỮNG&nbsp;<br><span>- TOP #1 AI OVERVIEW</span></h2>
+            <blockquote class="results__quote js-text">
               Đừng để doanh nghiệp bị bỏ lại trong kỷ nguyên tìm kiếm bằng AI.
                 Hãy để Midas giúp bạn làm chủ cuộc chơi.
             </blockquote>
-            <form class="lead-form" method="post" action="/">
-              <div class="lead-form__row lead-form__row--three">
-                <label><span>Tên</span>
-                  <input required="" autocomplete="name" name="name" type="text">
-                </label>
-                <label><span>SĐT</span>
-                  <input required="" autocomplete="tel" name="phone" type="tel">
-                </label>
-                <label><span>Email</span>
-                  <input required="" autocomplete="email" name="email" type="email">
-                </label>
-              </div>
-              <div class="lead-form__row">
-                <label><span>Domain website</span>
-                  <input autocomplete="url" name="domain" type="text">
-                </label>
-              </div>
-              <div class="lead-form__row">
-                <label><span>Nhu cầu</span>
-                  <textarea rows="1" name="needs"></textarea>
-                </label>
-              </div>
-              <button class="button button--lead" type="submit">NHẬN TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ</button>
-            </form>
+            <div class="lead-form js-text">
+              <form action="">
+                <div class="form-wrap">
+                  <div class="form-group item-3">
+                    <label>
+                      <input type="text" placeholder="Tên">
+                    </label>
+                    <label>
+                      <input type="text" placeholder="SDT">
+                    </label>
+                    <label>
+                      <input type="email" placeholder="Email">
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label>
+                      <input type="text" placeholder="Domain website">
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label>
+                      <input type="text" placeholder="Nhu cầu">
+                    </label>
+                  </div>
+                  <div class="lead-action">
+                    <button class="btn" type="submit"><span>NHẬN TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
-        <section class="gallery section" aria-labelledby="gallery-title">
-          <div class="gallery-grid" aria-label="Hình ảnh hoạt động của MIDAS">
-            <h2 class="sr-only" id="gallery-title">Gallery</h2>
-            <figure class="gallery-item gallery-item--1"><img loading="lazy" alt="" src="assets/images/gallery-8.png"></figure>
-            <figure class="gallery-item gallery-item--2"><img loading="lazy" alt="" src="assets/images/gallery-9.png"></figure>
-            <figure class="gallery-item gallery-item--3"><img loading="lazy" alt="" src="assets/images/gallery-1.png"></figure>
-            <figure class="gallery-item gallery-item--4"><img loading="lazy" alt="" src="assets/images/gallery-3.png"></figure>
-            <figure class="gallery-item gallery-item--5"><img loading="lazy" alt="" src="assets/images/gallery-10.png"></figure>
-            <figure class="gallery-item gallery-item--6"><img loading="lazy" alt="" src="assets/images/gallery-11.png"></figure>
-            <figure class="gallery-item gallery-item--7"><img loading="lazy" alt="" src="assets/images/gallery-2.png"></figure>
-            <figure class="gallery-item gallery-item--8"><img loading="lazy" alt="" src="assets/images/gallery-12.png"></figure>
-            <figure class="gallery-item gallery-item--9"><img loading="lazy" alt="" src="assets/images/gallery-5.png"></figure>
-            <figure class="gallery-item gallery-item--10"><img loading="lazy" alt="" src="assets/images/gallery-4.png"></figure>
-            <figure class="gallery-item gallery-item--11"><img loading="lazy" alt="" src="assets/images/gallery-6.png"></figure>
-            <figure class="gallery-item gallery-item--12"><img loading="lazy" alt="" src="assets/images/gallery-7.png"></figure>
+        <section class="gallery section">
+          <div class="gallery-grid js-gallery">
+            <figure class="gallery-item gallery-item--1"><a class="gItem" href="../assets/images/common/gallery1.jpg"><img src="./assets/images/common/gallery1.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--2"><a class="gItem" href="../assets/images/common/gallery2.jpg"><img src="./assets/images/common/gallery2.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--3"><a class="gItem" href="../assets/images/common/gallery3.jpg"><img src="./assets/images/common/gallery3.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--4"><a class="gItem" href="../assets/images/common/gallery4.jpg"><img src="./assets/images/common/gallery4.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--5"><a class="gItem" href="../assets/images/common/gallery5.jpg"><img src="./assets/images/common/gallery5.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--6"><a class="gItem" href="../assets/images/common/gallery6.jpg"><img src="./assets/images/common/gallery6.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--7"><a class="gItem" href="../assets/images/common/gallery7.jpg"><img src="./assets/images/common/gallery7.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--8"><a class="gItem" href="../assets/images/common/gallery8.jpg"><img src="./assets/images/common/gallery8.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--9"><a class="gItem" href="../assets/images/common/gallery9.jpg"><img src="./assets/images/common/gallery9.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--10"><a class="gItem" href="../assets/images/common/gallery10.jpg"><img src="./assets/images/common/gallery10.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--11"><a class="gItem" href="../assets/images/common/gallery11.jpg"><img src="./assets/images/common/gallery11.jpg" alt="" title="" loading="lazy"></a></figure>
+            <figure class="gallery-item gallery-item--12"><a class="gItem" href="../assets/images/common/gallery12.jpg"><img src="./assets/images/common/gallery12.jpg" alt="" title="" loading="lazy"></a></figure>
           </div>
         </section>
         <section class="industries section" aria-labelledby="industries-title">
@@ -941,6 +947,7 @@
     <script src="//cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
     <script src="./assets/js/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/library/gallery/lightgallery.min.js"></script>
     <script src="./assets/js/index.min.js"></script>
   </body>
 </html>
