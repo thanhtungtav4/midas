@@ -404,8 +404,8 @@ block container
               button.btn(type="submit")
                 span NHẬN TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
 
-  section.gallery.section
-    .gallery-grid.js-gallery
+  .gallery.section
+    .gallery-grid.js-gallery.js-text
       figure.gallery-item.gallery-item--1
         a.gItem(href="../assets/images/common/gallery1.jpg")
           +img("common/gallery1.jpg")
@@ -442,91 +442,17 @@ block container
       figure.gallery-item.gallery-item--12
         a.gItem(href="../assets/images/common/gallery12.jpg")
           +img("common/gallery12.jpg")
-  section.industries.section(aria-labelledby="industries-title")
-    .container
-      h2#industries-title.sec-tt LĨNH VỰC HOẠT ĐỘNG
-      div(class="industries__rule")
-      .industries-grid
-        article.industry-column
-          h3 Các lĩnh vực dịch vụ & Đời sống
-          ul
-            li Y tế & Sức khỏe
-            li Đầu tư & Tài chính
-            li Giáo dục & Việc làm
-            li Công nghiệp & Xây dựng
-            li Hàng không & Du lịch
-            li Thời trang & Bán lẻ
-        article.industry-column
-          h3 Các lĩnh vực Công nghệ & Phần mềm
-          ul
-            li Martech & AdTech
-            li Fintech & Cybersecurity
-            li E-commerce & CMS Platforms
-            li AI Platforms & Automation
-            li Business Software
-            li Phần mềm chuyên dụng, CSKH
-            li Biotech
-        article.industry-column
-          h3 Thế mạnh cốt lõi
-          ul
-            li Tiên phong GEO
-            li SEO Chuyên sâu
-            li Content Marketing
-            li Đào tạo SEO
-  section#faq.faq.section(aria-labelledby="faq-title")
+  section.faq.section
     .container(class="faq__container")
-      h2#faq-title.sec-tt CÂU HỎI THƯỜNG GẶP
-      details.faq-item(open="")
-        summary
-          span MIDAS khác biệt với các agency SEO khác như thế nào?
-          span(
-            aria-hidden="true"
-            class="faq-item__icon"
-            ) +
-        p
-          | MIDAS hoạt động như 1 đội ngũ in-house của khách hàng. Mục tiêu
-          |   của chúng tôi là đồng hành cùng khách hàng trên hành trình tối ưu
-          |   ROI, tăng trưởng bền vững và bứt phá doanh thu.
-      details.faq-item
-        summary
-          span MIDAS sẽ hỗ trợ như một phần của team in-house của tôi như thế nào?
-          span(
-            aria-hidden="true"
-            class="faq-item__icon"
-            ) +
-        p
-          | Đội ngũ MIDAS phối hợp trực tiếp với team nội bộ, chia sẻ dashboard
-          |   real-time và duy trì chế độ cập nhật định kỳ để mọi đầu việc đều rõ
-          |   tiến độ, trách nhiệm và mục tiêu.
-      details.faq-item
-        summary
-          span Ai sẽ là người trực tiếp quản lý và triển khai dự án SEO tại MIDAS?
-          span(
-            aria-hidden="true"
-            class="faq-item__icon"
-            ) +
-        p
-          | Mỗi dự án được dẫn dắt bởi Project Manager và đội ngũ specialist
-          |   chuyên trách theo từng hạng mục Technical SEO, Content và GEO.
-      details.faq-item
-        summary
-          span MIDAS cam kết gì về số lượng và chất lượng dự án mỗi năm?
-          span(
-            aria-hidden="true"
-            class="faq-item__icon"
-            ) +
-        p
-          | MIDAS ưu tiên chất lượng triển khai và sự đồng hành dài hạn, vì
-          |   vậy số lượng dự án tiếp nhận luôn được kiểm soát để đảm bảo mức độ
-          |   chăm sóc chuyên sâu cho từng thương hiệu.
-      details.faq-item
-        summary
-          span Làm thế nào tôi có thể trao đổi và hợp tác với MIDAS trong quá trình làm việc?
-          span(
-            aria-hidden="true"
-            class="faq-item__icon"
-            ) +
-        p
-          | MIDAS linh hoạt trao đổi qua họp định kỳ, nhóm làm việc riêng và
-          |   các kênh liên lạc trực tiếp để đảm bảo thông tin minh bạch, phản
-          |   hồi nhanh và phối hợp chặt chẽ.
+      h2.js-text.t-ct.sec-tt câu hỏi thường gặp
+      .faq-list.js-faq-list
+        each item, index in ['MIDAS khác biệt với các agency SEO khác như thế nào?', 'Có hỗ trợ thay máy nếu xảy ra sự cố không?']
+          .faq-item.js-faq-item.js-text
+            .faq-head
+              .faq-tt
+                p=item
+              .faq-icon.js-faq-head
+                span +
+            .faq-content.js-faq-content
+              .mona-content
+                p Có. Chúng tôi áp dụng mức đặt cọc linh hoạt tùy loại thiết bị và thời gian thuê, đảm bảo minh bạch và hoàn trả đầy đủ khi kết thúc hợp đồng.

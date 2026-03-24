@@ -30,6 +30,24 @@ export default function MatchHeightModule() {
       el.style.minHeight = maxHeightOfReasonCard + "px";
     });
     //========== end Metric Card =======
+
+    //========== start faq =======
+    function setFaqIconHeight() {
+      const items = document.querySelectorAll(".js-faq-item");
+      console.log(items);
+      items.forEach((item) => {
+        const title = item.querySelector(".faq-tt");
+        const icon = item.querySelector(".faq-icon");
+
+        if (!title || !icon) return;
+
+        const height = title.offsetHeight;
+
+        icon.style.minHeight = height + "px";
+      });
+    }
+    setFaqIconHeight();
+    //========== end faq =======
   }
 
   window.addEventListener("load", () => {

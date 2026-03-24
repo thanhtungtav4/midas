@@ -36,9 +36,10 @@ html
 
   body(class=pageID)
     include ../_modules/header
-    main.main#smooth-wrapper
+    #smooth-wrapper
       #smooth-content
-        block container
+        main.main
+          block container
         include ../_modules/footer
     //- script(src='./assets/js/library/jquery/jquery.js')
     script(src="//cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js")

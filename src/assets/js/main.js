@@ -2,7 +2,7 @@
 import SwiperModule from "./module/SwiperModule.js";
 // import Select2Module from "./module/Select2Module.js";
 import GalleryModule from "./module/GalleryModule.js";
-// import TabModule from "./module/TabModule.js";
+import TabModule from "./module/TabModule.js";
 import MenuModule from "./module/MenuModule.js";
 // import FormMoudule from "./module/FormModule.js";
 import MatchHeightModule from "./module/MatchHeightModule.js";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Animation
   // AosModule();
   // // Tab
-  // TabModule();
+  TabModule();
   // // Select
   // //Select2Module();
   // // Component
