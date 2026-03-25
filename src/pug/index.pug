@@ -244,27 +244,31 @@ block container
         | MIDAS GIÚP BẠN&nbsp;
         span NHƯ THẾ NÀO?
       p.tt-24.t-ct.js-text Quy trình làm việc chuẩn để MIDAS Agency giúp khách hàng hiện diện bền vững trên Search Engines & AI
-      .c-timeline
-        .c-timeline_progress
-          .c-timeline_progress-bar
-        each item in Array(4)
-          .c-timeline_item
-            .c-wrap
-              .c-wrap.cc-timeline_item
-                p.timeline-step 01.
-                p.timeline-tt Thiết lập nền tảng & Audit triệt để
-            .c-wrap.cc-align_center
-              .timeline_circle
-            .c-wrap
-              .c-card
-                .timeline-box
+      #timeline.c-timeline
+        //- div(
+        //-   aria-hidden="true"
+        //-   class="c-timeline_progress"
+        //-   )
+        //-   #timeline-progress(class="c-timeline_progress-bar")
+        .timeline-wrap
+          each item in Array(5)
+            article.is-active(class="c-timeline_item")
+              .c-wrap.cc-align_left
+                div(class="cc-timeline_item")
+                  p.timeline-step 01.
+                  h2.timeline-tt Thiết lập nền tảng & Audit triệt để
+              .c-wrap(class="cc-align_center")
+                div(class="timeline_circle")
+              .c-wrap.cc-align_right
+                .c-card
                   .mona-content
                     p
                       strong Phương án:
                       | &nbsp;Phân tích đối thủ và nghiên cứu thị trường chuyên sâu để tháo gỡ nút thắt "SEO không hiệu quả".
                     p
-                      strong Phương án:
-                      | &nbsp;Phân tích đối thủ và nghiên cứu thị trường chuyên sâu để tháo gỡ nút thắt "SEO không hiệu quả".
+                      strong Mục tiêu:
+                      | &nbsp;Hoàn thiện lộ trình Audit chỉ từ 7-10 ngày. Kiểm tra toàn diện lỗ hổng kỹ thuật và thực thể (Entity) để không bị AI "ngó lơ".
+
   section.reasons.section.is-decora
     .container
       h2.sec-tt.t-ct.js-text

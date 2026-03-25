@@ -2,6 +2,9 @@
   transition: 0.5s;
   line-height: 1.5;
   @include fz-22;
+  @include max(767px) {
+    font-size: 1.6rem;
+  }
   @include max(575px) {
     font-size: 1.2rem;
   }
@@ -55,10 +58,6 @@
   p {
     margin-bottom: 2.4rem;
 
-    strong {
-      font-weight: 700;
-    }
-
     &.wp-caption-text {
       margin-top: 1.2rem;
       margin-bottom: 0;
@@ -66,6 +65,9 @@
       text-align: center;
       @include fz-14;
       font-weight: 400;
+    }
+    @include max(767px) {
+      margin-bottom: 1.6rem;
     }
   }
 

@@ -635,63 +635,176 @@
   }
 }
 .c-timeline {
-  z-index: -1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   position: relative;
+  margin-top: 2.4rem;
 }
-.c-timeline_progress {
-  background-color: #494949;
-  width: 0.21rem;
-  height: 100%;
-  position: absolute;
-}
-.c-timeline_progress-bar {
-  z-index: 1;
-  background-color: #fffaef;
-  width: 3px;
-  height: 50vh;
-  position: fixed;
-  inset: 0 auto 50vh;
-}
+
+// .c-timeline_progress {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: calc(30% - 1.1rem);
+//   width: 2px;
+//   margin-left: -1px;
+//   background: rgba(#3c3bdf, 0.14);
+// }
+
+// .c-timeline_progress-bar {
+//   position: absolute;
+//   inset: 0 auto auto 0;
+//   width: 100%;
+//   height: 100%;
+//   transform-origin: top center;
+//   transform: scaleY(0);
+//   background: #3c3bdf;
+//   background: linear-gradient(
+//     0deg,
+//     rgba(60, 59, 223, 0) 0%,
+//     rgba(60, 59, 223, 1) 30%,
+//     rgba(60, 59, 223, 1) 50%,
+//     rgba(60, 59, 223, 1) 75%,
+//     rgba(60, 59, 223, 0) 100%
+//   );
+// }
+
 .c-timeline_item {
-  z-index: 2;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 0.25fr 1fr;
-  grid-auto-columns: 1fr;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  display: grid;
   position: relative;
-}
-.c-wrap {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   display: flex;
+  gap: 2.4rem;
+  align-items: normal;
+  // margin-top: 1rem;
+  // margin-bottom: 1rem;
+  padding: 2rem 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  &.is-active {
+    .c-card {
+      background: #fbfbfb;
+    }
+  }
+  @include max(767px) {
+    gap: 0.8rem;
+    padding: 1rem 0;
+  }
 }
+
+.c-wrap {
+  min-width: 0;
+  width: 3rem;
+  &.cc-align_left {
+    width: 26%;
+    @include max(767px) {
+      width: 34%;
+    }
+  }
+  &.cc-align_right {
+    width: 68%;
+    @include max(767px) {
+      width: 60%;
+    }
+  }
+}
+
+.cc-timeline_item {
+  opacity: 0.28;
+  transition:
+    opacity 0.45s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-step {
+  font-family: var(--font-thir);
+  font-size: 5rem;
+  color: #000;
+  @include max(767px) {
+    font-size: 1.6rem;
+  }
+}
+
+.timeline-tt {
+  font-size: 3rem;
+  font-family: var(--font-thir);
+  color: #3c3bdf;
+  text-transform: uppercase;
+  @include max(767px) {
+    font-size: 1.6rem;
+  }
+}
+
 .c-wrap.cc-align_center {
-  text-align: center;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: var(--progress, 0%);
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      0deg,
+      rgba(60, 59, 223, 0) 0%,
+      rgba(60, 59, 223, 1) 30%,
+      rgba(60, 59, 223, 1) 50%,
+      rgba(60, 59, 223, 1) 75%,
+      rgba(60, 59, 223, 0) 100%
+    );
+    transition: height 0.1s linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(#3c3bdf, 0.25);
+    @include transition;
+  }
 }
+
 .timeline_circle {
-  box-shadow: 0 0 0 8px var(--black);
-  background-color: #fff;
-  border-radius: 100%;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: sticky;
-  top: 50vh;
+  position: absolute;
+  transition: height 0.1s linear;
+  transform: translate(-50%, -50%);
+  top: var(--dotY, 0%);
+  left: 50%;
+  transition: top 0.1s linear;
+  z-index: 2;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background: #3e3ae0;
+  @include max(767px) {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
 }
+
 .c-card {
-  justify-content: start;
+  background: #d9d9d9;
+  border-radius: 1.5rem;
+  padding: 1.4rem 5rem;
+  @include transition;
+  @include max(767px) {
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+  }
 }
+
+.c-timeline_item.is-active .cc-timeline_item,
+.c-timeline_item.is-active .c-card {
+  opacity: 1;
+  transform: none;
+}
+
 /* Reasons */
 .reasons {
   // padding-top: 94px;

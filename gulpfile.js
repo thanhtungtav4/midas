@@ -28,7 +28,7 @@ function bundleJS(done) {
       bundle: true,
       outfile: "./template/assets/js/index.min.js",
       minify: true,
-      sourcemap: true,
+      // sourcemap: true,
       target: ["es2015"],
     })
     .then(() => done())
@@ -40,22 +40,24 @@ function bundleJS(done) {
 
 // ===== SCSS =====
 function style() {
-  return gulp
-    .src("src/scss/style.scss")
-    .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(
-      cleanCSS({
-        level: {
-          1: { specialComments: 0 },
-          2: true,
-        },
-      }),
-    )
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./template/assets/css"))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src("src/scss/style.scss")
+      .pipe(sourcemaps.init())
+      .pipe(sass().on("error", sass.logError))
+      .pipe(
+        cleanCSS({
+          level: {
+            1: { specialComments: 0 },
+            2: true,
+          },
+        }),
+      )
+      .pipe(rename({ suffix: ".min" }))
+      // .pipe(sourcemaps.write())
+      .pipe(gulp.dest("./template/assets/css"))
+      .pipe(browserSync.stream())
+  );
 }
 
 // ===== HTML (PUG) =====
