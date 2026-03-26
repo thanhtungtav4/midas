@@ -49,7 +49,7 @@ function style() {
         cleanCSS({
           level: {
             1: { specialComments: 0 },
-            2: true,
+            // 2: true,
           },
         }),
       )
@@ -92,8 +92,8 @@ function watch() {
     .watch("src/assets/js/**/*.js", bundleJS)
     .on("change", browserSync.reload);
   gulp.watch("src/assets/**/*", copyAsset).on("change", browserSync.reload);
-  gulp.watch("src/scss/**/*.scss", style);
-  gulp.watch("src/pug/**/*.pug", html);
+  gulp.watch("src/scss/**/*.scss", style).on("change", browserSync.reload);
+  gulp.watch("src/pug/**/*.pug", html).on("change", browserSync.reload);
 }
 
 // ===== BUILD =====
