@@ -56,7 +56,7 @@
   }
 
   p {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.6rem;
 
     &.wp-caption-text {
       margin-top: 1.2rem;
@@ -67,7 +67,7 @@
       font-weight: 400;
     }
     @include max(767px) {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.2rem;
     }
   }
 

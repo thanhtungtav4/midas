@@ -152,6 +152,17 @@ export default function MatchHeightModule() {
       });
     }
     projectCard1();
+    function projectCard2() {
+      const projectCard = document.querySelectorAll(".press-article__content");
+      if (!projectCard.length) return;
+      const maxHeightOfProjectCard = Math.max(
+        ...Array.from(projectCard).map((el) => el.offsetHeight),
+      );
+      projectCard.forEach((el) => {
+        el.style.minHeight = maxHeightOfProjectCard + "px";
+      });
+    }
+    projectCard2();
   }
 
   window.addEventListener("load", () => {

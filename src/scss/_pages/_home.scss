@@ -1245,6 +1245,7 @@
       flex-direction: column;
       row-gap: 1rem;
       padding-bottom: 1rem;
+      justify-content: space-between;
     }
     &__excerpt {
       @include fz-20;
@@ -1557,8 +1558,8 @@
   padding-top: 5rem;
   padding-bottom: 8rem;
   @include max(575px) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .header-logo {
     justify-content: start;
@@ -1566,16 +1567,25 @@
     img {
       height: 4.2rem;
     }
+    @include max(575px) {
+      margin-bottom: 2rem;
+      img {
+        height: 3rem;
+      }
+    }
   }
   .container {
     position: relative;
+    max-width: 105rem;
   }
 }
 
 .footer-grid {
   display: flex;
   justify-content: space-between;
+
   gap: 2.4rem 1.6rem;
+  // column-gap: 6rem;
   @include max(767px) {
     flex-wrap: wrap;
     justify-content: start;
@@ -1583,25 +1593,30 @@
 }
 .footer-column {
   &:nth-of-type(1) {
-    width: 20%;
+    width: 18%;
+    // width: 14.5%;
     @include max(767px) {
       width: calc(100% / 3 - (1 - 1 / 3) * 1.6rem);
     }
     @include max(575px) {
       width: 100%;
+      // width: calc(100% / 2 - (1 - 1 / 2) * 1.6rem);
     }
   }
   &:nth-of-type(2) {
-    width: 24%;
+    // width: 24%;
+    width: 19%;
     @include max(767px) {
       width: calc(100% / 3 - (1 - 1 / 3) * 1.6rem);
     }
     @include max(575px) {
       width: calc(100% / 2 - (1 - 1 / 2) * 1.6rem);
+      order: 3;
     }
   }
   &:nth-of-type(3) {
-    width: 20%;
+    // width: 20%;
+    width: 18%;
     @include max(767px) {
       width: calc(100% / 3 - (1 - 1 / 3) * 1.6rem);
     }
@@ -1611,8 +1626,13 @@
   }
   &:nth-of-type(4) {
     width: 30%;
+    // width: 29%;
     @include max(767px) {
       width: 100%;
+    }
+    @include max(575px) {
+      // width: calc(100% / 2 - (1 - 1 / 2) * 1.6rem);
+      order: 4;
     }
   }
 }
@@ -1621,6 +1641,9 @@
   text-transform: uppercase;
   color: #fff;
   font-size: 1.5rem;
+  @include max(575px) {
+    font-size: 1.2rem;
+  }
 }
 .footer-list {
   margin: 0;
@@ -1643,6 +1666,9 @@
     width: 2.2rem;
     height: auto;
     flex-shrink: 0;
+    @include max(575px) {
+      width: 1.6rem;
+    }
   }
 }
 
@@ -1655,7 +1681,7 @@
     }
   }
   @include max(575px) {
-    margin-top: 1.6rem;
+    margin-top: 0.8rem;
   }
 }
 .footer-box {
@@ -1663,6 +1689,9 @@
   align-items: center;
   gap: 1.6rem;
   justify-content: space-between;
+  @include max(575px) {
+    gap: 0.8rem;
+  }
 }
 .footer-social {
   display: flex;
@@ -1761,7 +1790,7 @@
 
 .footer-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: -1.1rem;
   padding-top: 1.6rem;
   font-size: 1.1rem;
   color: #fff;
@@ -1788,6 +1817,8 @@
   .menu-list {
     flex-direction: column;
     align-items: start;
+    margin-right: 0;
+    margin-left: 0;
     @include max(767px) {
       padding: 0;
     }

@@ -49,7 +49,10 @@ function style() {
         cleanCSS({
           level: {
             1: { specialComments: 0 },
-            // 2: true,
+            2: {
+              mergeMediaQueries: true,
+              removeDuplicateRules: true,
+            },
           },
         }),
       )
