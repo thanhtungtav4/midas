@@ -15,11 +15,7 @@
   display: flex;
   position: relative;
   box-shadow: 10px 10px rgba(255, 178, 20, 0.3);
-  &--sec {
-    background-color: #3c3bdf;
-    box-shadow: 10px 10px rgba(#eae9ff, 1);
-    color: #fff;
-  }
+
   &:hover {
     transform: translateY(-0.2rem);
   }
@@ -29,6 +25,15 @@
   }
   @include max(575px) {
     padding: 1rem 2rem;
+  }
+
+  &--sec {
+    background-color: #3c3bdf;
+    box-shadow: 10px 10px rgba(#eae9ff, 1);
+    color: #fff;
+    @include max(767px) {
+      box-shadow: 6px 6px rgba(#3c3bdf, 0.3);
+    }
   }
   &--thir {
     background: #3c3bdf;
