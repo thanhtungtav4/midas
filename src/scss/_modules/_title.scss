@@ -76,6 +76,8 @@
   }
   .swiper-pagination {
     bottom: 0;
+    left: 50%;
+    width: fit-content;
     &-bullet {
       opacity: 1;
       background: #d9d9d9;
@@ -88,11 +90,18 @@
     }
   }
 }
-.scroll1 {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 20s linear infinite;
-}
+// .scroll1,
+// .scroll2 {
+//   display: flex;
+//   white-space: nowrap;
+//   will-change: transform;
+//   transform: translateZ(0);
+// }
+// .scroll1 {
+//   display: flex;
+//   width: max-content;
+//   animation: scroll-left 12s linear infinite;
+// }
 
 @keyframes scroll-left {
   from {
@@ -101,4 +110,12 @@
   to {
     transform: translateX(-50%);
   }
+}
+.wpcf7 form.sent .lead-action,
+.wpcf7 form.sent input[type="submit"],
+.wpcf7 form.sent button[type="submit"] {
+  display: none !important;
+}
+#lead-form {
+  scroll-margin-top: 100px; /* chiều cao header */
 }

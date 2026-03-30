@@ -10,6 +10,7 @@ import MatchHeightModule from "./module/MatchHeightModule.js";
 // import RangeModule from "./module/RangeModule.js";
 import InfiniteslideModule from "./module/InfiniteslideModule.js";
 import GsapModule from "./module/GsapModule.js";
+import SmoothScroll from "./module/SmoothScrollModule.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -29,4 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Select2Module();
   InfiniteslideModule();
   GsapModule();
+  // SmoothScroll();
 });

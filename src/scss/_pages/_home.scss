@@ -1,3 +1,10 @@
+#smooth-wrapper {
+  overflow: hidden auto;
+}
+.swiper-pagination {
+  left: 50%;
+  width: fit-content;
+}
 /* Hero */
 .hero {
   padding-top: 4rem;
@@ -103,7 +110,7 @@
     margin-top: 1rem;
   }
   @include max(575px) {
-    display: none;
+    // display: none;
   }
 }
 
@@ -377,20 +384,24 @@
       align-items: center;
       // gap: 2.4rem;
       position: relative;
+      width: 100%;
     }
     &-item {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0 1.6rem;
+      min-width: 10rem;
       img {
         max-height: 8rem;
+        min-height: 4rem;
         width: auto;
         @include max(767px) {
           max-height: 6rem;
         }
         @include max(575px) {
           max-height: 3rem;
+          min-height: 2rem;
         }
       }
       @include max(575px) {
@@ -437,6 +448,11 @@
     margin-top: 4rem;
     @include max(575px) {
       margin-top: 2rem;
+    }
+  }
+  .business-card {
+    .btn {
+      display: none;
     }
   }
 }
@@ -605,6 +621,8 @@
     .mona-content {
       // flex: 1;
       // height: 18.5rem;
+      // font-size: 1.8rem;
+      @include fz-20;
       overflow: hidden;
       // display: -webkit-box;
       // -webkit-line-clamp: 5;
@@ -614,7 +632,14 @@
       //   -webkit-line-clamp: 3;
       //   line-clamp: 3;
       // }
+
+      .is-show {
+        font-size: 1.5rem;
+      }
       @include max(575px) {
+        .is-show {
+          font-size: 1.2rem;
+        }
       }
       @include transition;
     }
@@ -1303,6 +1328,7 @@
     padding-bottom: 13rem;
     @include bgImage;
     background-image: url("../images/common/form-bg.jpg");
+    position: relative;
     @include max(767px) {
       padding: 4rem 2.4rem;
       padding-bottom: 8rem;
@@ -1311,6 +1337,15 @@
       padding: 3.2rem 1.4rem;
       padding-bottom: 6rem;
       margin-top: 2.4rem;
+    }
+    &:has(.sent) {
+      padding-bottom: 5rem;
+      @include max(767px) {
+        padding-bottom: 4rem;
+      }
+      @include max(575px) {
+        padding-bottom: 3.2rem;
+      }
     }
   }
   &-action {
@@ -1368,22 +1403,23 @@
     display: flex;
     flex-wrap: wrap;
   }
-}
-
-.gallery-item {
-  overflow: hidden;
-  @include max(575px) {
-    width: calc(100% / 3);
-    &:nth-of-type(4),
-    &:nth-of-type(7) {
-      width: 100%;
-    }
-    &:nth-of-type(5),
-    &:nth-of-type(6) {
-      width: 50%;
-    }
-    &:last-child {
-      width: calc(2 * (100% / 3));
+  .gallery-item {
+    overflow: hidden;
+    flex: unset;
+    padding: 0;
+    @include max(575px) {
+      width: calc(100% / 3);
+      &:nth-of-type(4),
+      &:nth-of-type(7) {
+        width: 100%;
+      }
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        width: 50%;
+      }
+      &:last-child {
+        width: calc(2 * (100% / 3));
+      }
     }
   }
 }

@@ -77,6 +77,7 @@
       background-color: white;
       font-family: var(--font-pri);
       border: 0.1rem solid #f0f0f0;
+      color: $color-second;
       @include transition;
       @include max(767px) {
         height: 4rem;
@@ -325,4 +326,14 @@
     .select2-results__option--highlighted.select2-results__option--selectable {
     background-color: $color-sec;
   }
+}
+.wpcf7 form .wpcf7-response-output {
+  color: #fff;
+}
+.wpcf7-spinner {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
 }

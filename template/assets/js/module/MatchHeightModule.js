@@ -34,7 +34,7 @@ export default function MatchHeightModule() {
     //========== start faq =======
     function setFaqIconHeight() {
       const items = document.querySelectorAll(".js-faq-item");
-      console.log(items);
+      // console.log(items);
       items.forEach((item) => {
         const title = item.querySelector(".faq-tt");
         const icon = item.querySelector(".faq-icon");
@@ -74,7 +74,7 @@ export default function MatchHeightModule() {
         const lineHeight = getLineHeight(el);
 
         // mobile: 2 dòng, desktop: 5 dòng
-        const lines = window.innerWidth < 768 ? 2 : 4;
+        const lines = window.innerWidth < 768 ? 3 : 5;
 
         return lineHeight * lines;
       }
@@ -163,6 +163,19 @@ export default function MatchHeightModule() {
       });
     }
     projectCard2();
+    function projectCard3() {
+      const projectCard = document.querySelectorAll(
+        ".fields .business-card .business-tt",
+      );
+      if (!projectCard.length) return;
+      const maxHeightOfProjectCard = Math.max(
+        ...Array.from(projectCard).map((el) => el.offsetHeight),
+      );
+      projectCard.forEach((el) => {
+        el.style.minHeight = maxHeightOfProjectCard + "px";
+      });
+    }
+    projectCard3();
   }
 
   window.addEventListener("load", () => {

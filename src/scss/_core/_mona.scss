@@ -1,7 +1,7 @@
 .mona-content {
   transition: 0.5s;
   line-height: 1.5;
-  @include fz-22;
+  @include fz-20;
   @include max(767px) {
     font-size: 1.6rem;
   }
