@@ -13,7 +13,7 @@ $color-thir: #fafafa;
 $color-sec: #f0f0f0;
 
 $header: 7.5rem;
-$shadow: 0 4px 4px 0 rgba(#000, 0.25);
+$shadow: 0 4px 4px rgba(#000, 0.25);
 
 @mixin max($value) {
   @media screen and (max-width: $value) {
