@@ -42,7 +42,7 @@
 .menu-list {
   display: flex;
   align-items: center;
-  --sp: 1.2rem;
+  --sp: 1.6rem;
   margin-right: calc(-1 * var(--sp));
   margin-left: calc(-1 * var(--sp));
   @include max(767px) {

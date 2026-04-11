@@ -30,9 +30,9 @@ block container
       figure.js-text(class="hero__team")
         +img("common/hero.png")
       div.js-text(class="hero__actions")
-        a.btn(href="#")
+        a.btn(href="https://midas.vn/")
           span Đăng ký tư vấn SEO
-        a.btn.btn--sec(href="#lead-form")
+        a.btn(href="#lead-form").btn.btn--sec
           span Báo giá dịch vụ
       //- .hero__lead.tt-25
       //-   blockquote.js-text(class="hero__quote tt-24")
@@ -372,7 +372,7 @@ block container
         .swiper-pagination
   a(href="#").global.js-text
     +img("common/global2.jpg")
-  section.lead.section#lead-form
+  section.lead.section
     .container
       h2.js-text.t-ct.sec-tt
         | XÂY DỰNG HỆ THỐNG SEO BỀN VỮNG&nbsp;
@@ -382,7 +382,7 @@ block container
         | Đừng để doanh nghiệp bị bỏ lại trong kỷ nguyên tìm kiếm bằng AI.
         |   Hãy để Midas giúp bạn làm chủ cuộc chơi.
       .lead-form.js-text
-        form(action="")
+        form#lead-form(action="")
           .form-wrap
             .form-group.item-3
               label

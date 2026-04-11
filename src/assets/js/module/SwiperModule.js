@@ -23,14 +23,37 @@ export default function SwiperModule() {
   initSwiperForElement(".js-projects");
   initSwiperForElement(".js-testimonial");
   initSwiperForElement(".js-press");
-  // handleIntersectionModule(
-  //   "js-result",
-  //   (el) => {
-  //     initSwiperForElement(el);
-  //   },
-  //   {
-  //     threshold: 0.1,
-  //     rootMargin: "0px 0px 100px 0px",
-  //   },
-  // );
+  if (
+    document.querySelector(".results-thumb") &&
+    document.querySelector(".results-gallery")
+  ) {
+    const swiperResultsThumb = new Swiper(".results-thumb .swiper", {
+      loop: true,
+      slidesPerView: "auto",
+      freeMode: true,
+      watchSlidesProgress: true,
+      speed: 800,
+    });
+    const swiperResultsGallery = new Swiper(".results-gallery .swiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".results-gallery .swiper-navigation .next",
+        prevEl: ".results-gallery .swiper-navigation .prev",
+      },
+      thumbs: {
+        swiper: swiperResultsThumb,
+      },
+    });
+  }
+  if (document.querySelector(".pricing-slider")) {
+    const pricingSlider = new Swiper(".pricing-slider .swiper", {
+      loop: true,
+      speed: 800,
+      slidesPerView: "auto",
+      pagination: {
+        el: ".pricing-slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
 }

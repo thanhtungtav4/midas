@@ -27,9 +27,9 @@ export default function MenuModule() {
     let currentScroll =
       window.pageYOffset || document.documentElement.scrollTop;
     if (currentScroll > lastScrollTop && currentScroll > 100) {
-      header.classList.add("is-hidden");
+      // header.classList.add("is-hidden");
     } else {
-      header.classList.remove("is-hidden");
+      // header.classList.remove("is-hidden");
     }
     if (currentScroll > 100) {
       header.classList.add("is-fixed");
@@ -50,4 +50,13 @@ export default function MenuModule() {
   // $(".js-scroll-top").on("click", function () {
   //   $("html, body").animate({ scrollTop: 0 });
   // });
+
+  //============== window scrolling progress bar =======
+  $(document).on("scroll resize", function () {
+    var $d = $(document),
+      $w = $(window);
+    $("#scroll-bar").width(
+      ($d.scrollTop() / ($d.height() - $w.height())) * 100 + "%",
+    );
+  });
 }

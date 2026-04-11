@@ -1,8 +1,10 @@
 header.header.js-header#header
   .container
     .header-wrap
-      .header-logo
+      .header-logo.logo-main
         +img("common/logo.png")
+      .header-logo.logo-white
+        +img("common/logo-white.png")
       .header-main
         nav.header-nav.js-header-nav
           ul.menu-list
@@ -10,8 +12,10 @@ header.header.js-header#header
               li.menu-item(class=`${id === 0 ? "current-menu-item" : ""} `)
                 a(href="#")=item
         .header-action
-          a(href="#").header-btn
+          a(href="#").header-btn.logo-main
             span.hide-sitename NHẬN TƯ VẤN
             +img("common/header-btn.png")
+          a(href="#").header-btn.logo-white
+            span NHẬN TƯ VẤN
           .menu-bar.js-bar
             .menu-icon

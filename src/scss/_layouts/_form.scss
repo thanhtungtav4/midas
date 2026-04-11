@@ -43,6 +43,22 @@
         }
       }
     }
+    &.item-2 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      --gap: 1.8rem;
+      gap: var(--gap);
+      label {
+        &:first-child {
+          width: 52%;
+        }
+        width: calc(48% - var(--gap));
+      }
+      @include max(575px) {
+        --gap: 0.8rem;
+      }
+    }
     label {
       width: 100%;
       display: block;

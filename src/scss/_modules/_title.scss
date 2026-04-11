@@ -41,6 +41,9 @@
 .t-ct {
   text-align: center;
 }
+.t-up {
+  text-transform: uppercase;
+}
 .is-decora {
   position: relative;
   padding-bottom: 8rem;
@@ -117,5 +120,8 @@
   display: none !important;
 }
 #lead-form {
-  scroll-margin-top: 100px; /* chiều cao header */
+  // scroll-margin-top: 50rem; /* chiều cao header */
+}
+.fw-b {
+  font-weight: 700;
 }

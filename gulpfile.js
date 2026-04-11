@@ -8,6 +8,11 @@ const esbuild = require("esbuild");
 const path = require("path");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
+const tinypng = require("gulp-tinypng-compress");
+const plumber = require("gulp-plumber");
+const gulpIf = require("gulp-if");
+const fs = require("fs");
+// const gcmq = require("gulp-group-css-media-queries");
 // ===== CLEAN =====
 function cleanSource() {
   return del(["template/**", "!template"]);
@@ -19,7 +24,30 @@ function copyAsset() {
     .src(["src/assets/**/*", "!src/assets/js/main.js"])
     .pipe(gulp.dest("./template/assets"));
 }
+//Tiny PNG
+var API_KEY = ["VLMNbRLp20d1zb8sMthZWtddyNJRWBLs"];
 
+function optimizeImages() {
+  const sizeLimit = 1024 * 1024;
+
+  return gulp
+    .src("src/assets/images/**/*.{png,jpg,jpeg}")
+    .pipe(plumber())
+    .pipe(
+      gulpIf(
+        (file) => {
+          const stats = fs.statSync(file.path);
+          return stats.size > sizeLimit;
+        },
+        tinypng({
+          key: API_KEY,
+          sigFile: "images/.tinypng-sigs",
+          log: true,
+        }),
+      ),
+    )
+    .pipe(gulp.dest("template/assets/images"));
+}
 // ===== BUNDLE JS (1 FILE) =====
 function bundleJS(done) {
   esbuild
@@ -28,6 +56,7 @@ function bundleJS(done) {
       bundle: true,
       outfile: "./template/assets/js/index.min.js",
       minify: true,
+
       // sourcemap: true,
       target: ["es2015"],
     })
@@ -44,20 +73,19 @@ function style() {
     gulp
       .src("src/scss/style.scss")
       .pipe(sourcemaps.init())
-      .pipe(sass().on("error", sass.logError))
+      .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+      // .pipe(gcmq())
       .pipe(
         cleanCSS({
+          // Keep level 1 only so responsive rules preserve Sass output order.
           level: {
             1: { specialComments: 0 },
-            2: {
-              mergeMediaQueries: true,
-              removeDuplicateRules: true,
-            },
           },
         }),
       )
+
       .pipe(rename({ suffix: ".min" }))
-      // .pipe(sourcemaps.write())
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest("./template/assets/css"))
       .pipe(browserSync.stream())
   );
@@ -102,7 +130,7 @@ function watch() {
 // ===== BUILD =====
 const build = gulp.series(
   cleanSource,
-  gulp.parallel(style, html, bundleJS, copyAsset),
+  gulp.parallel(style, html, bundleJS, copyAsset, optimizeImages),
   watch,
 );
 
@@ -110,3 +138,5 @@ const build = gulp.series(
 exports.default = build;
 exports.build = build;
 exports.bundleJS = bundleJS;
+exports.style = style;
+exports.html = html;

@@ -176,6 +176,18 @@ export default function MatchHeightModule() {
       });
     }
     projectCard3();
+
+    function projectCard4() {
+      const projectCard = document.querySelectorAll(".domain-tt");
+      if (!projectCard.length) return;
+      const maxHeightOfProjectCard = Math.max(
+        ...Array.from(projectCard).map((el) => el.offsetHeight),
+      );
+      projectCard.forEach((el) => {
+        el.style.minHeight = maxHeightOfProjectCard + "px";
+      });
+    }
+    projectCard4();
   }
 
   window.addEventListener("load", () => {
