@@ -90,9 +90,7 @@ body:not(.homepage) {
       background: #fff;
     }
   }
-  .container {
-    max-width: 114.8rem;
-  }
+
   //=========== header =========
   .header {
     background: #000;
@@ -137,7 +135,7 @@ body:not(.homepage) {
       padding-top: 2.4rem;
     }
     .hero__inner {
-      max-width: 70.4rem;
+      max-width: 71.4rem;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
@@ -365,9 +363,12 @@ body:not(.homepage) {
   }
   .domain-item {
     row-gap: 1rem;
-    width: 25%;
+    width: calc(70% / 3);
     min-width: unset;
     justify-content: start;
+    &:nth-of-type(2) {
+      width: 30%;
+    }
     @include max(767px) {
       width: calc(100% / 3);
     }

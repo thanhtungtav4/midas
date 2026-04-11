@@ -35,6 +35,11 @@ body {
   //   background: rgba(#ee1e3d, 0.2);
   //   border-radius: 1rem;
   // }
+  &.homepage {
+    .container {
+      max-width: 124.6rem;
+    }
+  }
 }
 
 a {
@@ -73,10 +78,11 @@ textarea {
 
 .container {
   width: 100%;
-  max-width: 124.6rem;
+
   height: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
+  max-width: 114.8rem;
 }
 
 iframe {

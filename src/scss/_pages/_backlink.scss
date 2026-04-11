@@ -1,2 +1,71 @@
 .p-backlink {
+  .hero.hero--sec {
+    .hero__inner {
+      max-width: 76.2rem;
+    }
+    .hero__lead {
+      max-width: 71.4rem;
+    }
+    .lead-action {
+      display: flex;
+      align-items: center;
+      @include min(768px) {
+        --gap: 2.2rem;
+      }
+      gap: var(--gap);
+
+      .btn {
+        width: calc(50% - (1 - 1 / 2) * var(--gap));
+        font-family: var(--font-pri);
+        text-transform: none;
+        @include fz-24;
+        text-shadow: none;
+        box-shadow: none;
+      }
+    }
+    .form-group.item-2 {
+      @include min(768px) {
+        --gap: 2.2rem;
+      }
+    }
+    .form-group.item-2 label {
+      width: calc(50% - (1 - 1 / 2) * var(--gap));
+    }
+  }
+  .fields.fields--sec {
+    .business-item {
+      width: 20%;
+      text-align: center;
+      position: relative;
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        @include bgImage(center, contain);
+        background-image: url("../images/seo/arrow.svg");
+        width: 3rem;
+        height: 3rem;
+        right: -1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+    }
+  }
+  .benefit {
+    .tt-desc {
+      max-width: 89.4rem;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 1rem;
+    }
+    &-tt {
+      text-transform: none;
+    }
+  }
 }
