@@ -127,6 +127,12 @@ body:not(.homepage) {
     display: flex;
   }
   //---------------------
+  .lead {
+    padding-bottom: 8rem;
+    @include max(575px) {
+      padding-bottom: 4rem;
+    }
+  }
 }
 .hero {
   &.hero--sec {

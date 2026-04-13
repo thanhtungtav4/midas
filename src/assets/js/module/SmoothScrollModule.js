@@ -1,8 +1,8 @@
 export default function SmoothScrollModule() {
   SmoothScroll({
     // Scrolling Core
-    animationTime: 1200, // [ms]
-    stepSize: 85, // [px]
+    animationTime: 600, // [ms]
+    stepSize: 110, // [px]
 
     // Acceleration
     accelerationDelta: 50, // 50
@@ -19,8 +19,9 @@ export default function SmoothScrollModule() {
     pulseNormalize: 1,
 
     // Other
+    touchpadSupport: false, // ignore touchpad by default
     fixedBackground: true,
-    // excluded: ".taste-content, .m-content",
+    excluded: "",
   });
   // const nativeScrollSelectors = [".taste-content", ".m-content"];
 
