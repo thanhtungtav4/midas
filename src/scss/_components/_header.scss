@@ -38,6 +38,7 @@
   align-items: center;
   width: fit-content;
   column-gap: 1.2rem;
+  height: 100%;
 }
 .menu-list {
   display: flex;
@@ -145,6 +146,7 @@
   }
 }
 .header-nav {
+  height: 100%;
   @include max(767.98px) {
     display: none;
   }
@@ -318,5 +320,27 @@
     &:hover {
       color: $color-pri;
     }
+  }
+}
+.fpv2 .header-nav .menu-item-has-children::after {
+  top: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  @include max(767px) {
+    top: 2rem;
+  }
+}
+.fpv2 .header-nav .sub-menu::before {
+  height: 4rem;
+}
+@include max(767px) {
+  .fpv2 .header-nav .sub-menu {
+    opacity: 1;
+    max-height: unset;
+    display: none;
+  }
+  .fpv2 .header-nav .sub-menu .menu-item {
+    font-size: 1.4rem;
+    font-style: italic;
   }
 }

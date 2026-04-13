@@ -15,6 +15,20 @@ export default function MenuModule() {
 
   //========= end show hide header mobile ===========
 
+  if (window.innerWidth < 768) {
+    console.log("test");
+    $(".menu-item-has-children").click(function (e) {
+      let target = $(e.target);
+      // console.log(target);
+      if (!target.is("> a")) {
+        e.preventDefault();
+
+        $(this).toggleClass("is-active");
+        $(this).children(".sub-menu").stop().slideToggle();
+      }
+    });
+  }
+
   //========= start show hide header pc ===========
 
   let header = document.querySelector(".js-header");
