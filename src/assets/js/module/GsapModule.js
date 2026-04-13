@@ -92,9 +92,11 @@ export default function GsapModule() {
 
       ScrollTrigger.create({
         trigger: item,
-        start: "top center",
-        end: "bottom center",
+        // start: "top center",
+        // end: "bottom center",
         // scrub: true,
+        start: "top 2%",
+        end: "bottom 0%",
         scrub: 0.5,
 
         onUpdate: (self) => {
