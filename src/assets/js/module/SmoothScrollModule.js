@@ -37,43 +37,45 @@ export default function SmoothScrollModule() {
   //   });
   // });
 
-  const handleClick = (e) => {
-    const link = e.currentTarget;
-    const targetId = link.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+  // const handleClick = (e) => {
+  //   const link = e.currentTarget;
+  //   const targetId = link.getAttribute("href");
+  //   const targetElement = document.querySelector(targetId);
 
-    if (!targetElement) return;
+  //   if (!targetElement) return;
 
-    e.preventDefault();
+  //   e.preventDefault();
 
-    // Hàm scroll thông minh
-    const smoothScrollTo = (element) => {
-      // Nếu element đang ẩn, chờ nó hiện rồi mới scroll
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            element.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-            observer.disconnect(); // Ngừng quan sát sau khi scroll
-          }
-        });
-      });
+  //   // Hàm scroll thông minh
+  //   const smoothScrollTo = (element) => {
+  //     // Nếu element đang ẩn, chờ nó hiện rồi mới scroll
+  //     const observer = new IntersectionObserver((entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           element.scrollIntoView({
+  //             behavior: "smooth",
+  //             block: "start",
+  //           });
+  //           observer.disconnect(); // Ngừng quan sát sau khi scroll
+  //         }
+  //       });
+  //     });
 
-      observer.observe(element);
+  //     observer.observe(element);
 
-      // Fallback sau 300ms nếu IntersectionObserver không trigger
-      setTimeout(() => {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        observer.disconnect();
-      }, 300);
-    };
+  //     // Fallback sau 300ms nếu IntersectionObserver không trigger
+  //     setTimeout(() => {
+  //       element.scrollIntoView({
+  //         behavior: "smooth",
+  //         block: "start",
+  //       });
+  //       observer.disconnect();
+  //     }, 300);
+  //   };
 
-    smoothScrollTo(targetElement);
-  };
-  handleClick();
+  //   smoothScrollTo(targetElement);
+  // };
+  // document.querySelectorAll("a[href^='#']").forEach((link) => {
+  //   link.addEventListener("click", handleClick);
+  // });
 }

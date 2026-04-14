@@ -59,6 +59,7 @@
     .lead-action {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
       --gap: 1.8rem;
       @include min(768px) {
@@ -67,12 +68,16 @@
       gap: var(--gap);
 
       .btn {
-        width: calc(50% - (1 - 1 / 2) * var(--gap));
+        // width: calc(50% - (1 - 1 / 2) * var(--gap));
+        width: 100%;
         font-family: var(--font-pri);
         text-transform: none;
         @include fz-24;
         text-shadow: none;
         box-shadow: none;
+        &:last-child {
+          display: none;
+        }
       }
       @include max(575px) {
         --gap: 0.8rem;
