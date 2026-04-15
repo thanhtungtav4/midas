@@ -56,4 +56,15 @@ export default function SwiperModule() {
       },
     });
   }
+  if (document.querySelector(".js-rules-slider")) {
+    const rulesSlider = new Swiper(".js-rules-slider .swiper", {
+      loop: true,
+      speed: 800,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: ".js-rules-slider .swiper-navigation .next",
+        prevEl: ".js-rules-slider .swiper-navigation .prev",
+      },
+    });
+  }
 }

@@ -654,6 +654,33 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    position: relative;
+    .swiper-navigation {
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .prev {
+        left: 1rem;
+      }
+      .next {
+        right: 1rem;
+      }
+    }
     img {
       height: 100%;
       width: auto;

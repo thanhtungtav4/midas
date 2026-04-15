@@ -329,8 +329,19 @@ block container
               h3.fw-b Meeting trình bày kế hoạch:
               .mona-content
                 p Meeting chốt trình bày kết quả Audit & kế hoạch.
-        .rules-img.js-text
-          +img("seo/rules.jpg")
+        .rules-img.js-text.js-gallery.js-rules-slider
+          .swiper
+            .swiper-wrapper
+              each item in Array(4)
+                .swiper-slide
+                  a.gItem(href="../assets/images/seo/rules.jpg")
+                    +img("seo/rules.jpg")
+          .swiper-navigation
+              .prev
+                +img("seo/prev.svg")
+              .next
+                +img("seo/next.svg")
+
   section.results.section.is-decora
     .container
       h2.sec-tt
