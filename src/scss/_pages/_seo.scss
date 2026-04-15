@@ -245,6 +245,9 @@
       position: relative;
       justify-content: start;
       flex-direction: column;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
       @include max(575px) {
         margin-top: 2rem;
       }
@@ -263,7 +266,7 @@
       }
       &.img--1 {
         position: initial;
-        border: 7px solid #000;
+        // border: 7px solid #000;
         width: 90%;
         margin: 0 auto;
         margin-top: 5.6rem;
@@ -279,7 +282,7 @@
       &.img--2 {
         top: 32%;
         left: 0;
-        width: 26%;
+        width: 22%;
         @include max(575px) {
           top: 30%;
         }
@@ -287,7 +290,7 @@
       &.img--3 {
         right: 0;
         top: 0;
-        width: 48%;
+        width: 40%;
       }
       &-col {
         display: flex;
@@ -298,14 +301,14 @@
         }
       }
       &.img--4 {
-        width: 50%;
+        width: 45%;
         margin-top: 2.7rem;
         @include max(575px) {
           margin-top: 0.6rem;
         }
       }
       &.img--5 {
-        width: 42%;
+        width: 40%;
       }
     }
   }
@@ -927,13 +930,17 @@
       }
     }
     .swiper-pagination {
-      position: initial;
+      position: relative;
       margin-top: 2.4rem;
+      top: unset;
+      left: unset;
       width: 70%;
       margin-right: auto;
       margin-left: auto;
       height: 5px;
       background: #d9d9d9;
+      transform: unset;
+      bottom: unset;
       .swiper-pagination-progressbar-fill {
         background: #6c6c6c;
       }
@@ -984,6 +991,11 @@
 
       .unit {
         // font-size: 1.2rem;
+      }
+      & + .mona-content {
+        @include max(767px) {
+          display: none;
+        }
       }
     }
 

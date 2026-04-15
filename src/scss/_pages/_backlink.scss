@@ -10,7 +10,7 @@
     }
     &-table {
       background: #fff;
-      padding: 4rem 2rem;
+      padding: 2rem 2rem;
       box-shadow: $shadow;
       table {
         width: 100%;
@@ -18,18 +18,38 @@
         font-family: var(--font-pri);
         thead {
           th {
-            text-align: left;
+            text-align: center;
 
             font-weight: 700;
             text-transform: uppercase;
+            color: #3c3bef;
+            &:nth-of-type(2) {
+              text-align: left;
+            }
           }
         }
         td,
         th {
-          padding: 1rem;
-          @include fz-24;
+          vertical-align: middle;
+          &:first-child {
+            width: 10%;
+          }
+          &:nth-of-type(2) {
+            width: 30%;
+          }
+          width: 20%;
+          padding: 1.6rem;
+          @include fz-16;
           strong {
             font-weight: 700;
+          }
+          border-bottom: 1px solid #3b3bef30;
+        }
+        tr {
+          &:last-child {
+            td {
+              border: 0;
+            }
           }
         }
         td {
@@ -37,6 +57,10 @@
           font-weight: 700;
           &:nth-of-type(2) {
             text-align: left;
+            font-weight: 400;
+            max-width: 30rem;
+          }
+          &:nth-of-type(3) {
             font-weight: 400;
           }
           &:nth-of-type(5) {
