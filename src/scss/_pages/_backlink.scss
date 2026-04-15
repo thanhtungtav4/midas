@@ -178,3 +178,11 @@
     }
   }
 }
+.indivisual {
+  .tt-desc {
+    max-width: 110rem;
+    text-align: center;
+    @include fz-24;
+    margin-top: 1.6rem;
+  }
+}
