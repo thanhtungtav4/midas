@@ -67,6 +67,9 @@
             font-weight: 400;
           }
         }
+        tfoot {
+          display: none;
+        }
       }
     }
     &-txt {
@@ -184,5 +187,7 @@
     text-align: center;
     @include fz-24;
     margin-top: 1.6rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
