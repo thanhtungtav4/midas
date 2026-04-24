@@ -78,7 +78,7 @@
   }
   .hero.hero--sec {
     .hero__inner {
-      max-width: 76.2rem;
+      // max-width: 76.2rem;
     }
     .hero__lead {
       max-width: 71.4rem;
@@ -189,5 +189,18 @@
     margin-top: 1.6rem;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+.hero__content {
+  .btn-wrap {
+    .btn {
+      margin-left: 0;
+      &--sec {
+        background-color: #ffb214;
+      }
+      @include max(767px) {
+        margin-top: 2.4rem;
+      }
+    }
   }
 }

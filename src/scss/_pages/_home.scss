@@ -582,20 +582,20 @@
   }
 
   .business-item {
-    &:nth-of-type(4),
-    &:nth-of-type(5) {
-      width: 50%;
-    }
-    &:nth-of-type(5) {
-      @include max(767px) {
-        width: 100%;
-      }
-    }
-    &:nth-of-type(4) {
-      @include max(575px) {
-        width: 100%;
-      }
-    }
+    // &:nth-of-type(4),
+    // &:nth-of-type(5) {
+    //   width: 50%;
+    // }
+    // &:nth-of-type(5) {
+    //   @include max(767px) {
+    //     width: 100%;
+    //   }
+    // }
+    // &:nth-of-type(4) {
+    //   @include max(575px) {
+    //     width: 100%;
+    //   }
+    // }
   }
   .business-card {
     height: fit-content;
@@ -1898,6 +1898,27 @@
     @include max(575px) {
       margin-top: 1.6rem;
       font-size: 1.4rem;
+    }
+  }
+}
+.services-slider {
+  .swiper-wrapper {
+    flex-direction: row;
+    row-gap: 3rem;
+    @include max(992px) {
+      row-gap: 1.6rem;
+    }
+  }
+  .swiper-slide {
+    padding: 0 1.5rem;
+    @include max(992px) {
+      padding: 0 0.8rem;
+    }
+  }
+  &:has(.swiper-pagination-bullet) {
+    .swiper-pagination {
+      position: initial;
+      margin-top: 2.4rem;
     }
   }
 }

@@ -67,4 +67,56 @@ export default function SwiperModule() {
       },
     });
   }
+  const businessTypesSwiperEl = document.querySelector(".js-business-types");
+  if (businessTypesSwiperEl) {
+    const businessTypesPaginationEl =
+      businessTypesSwiperEl.querySelector(".swiper-pagination");
+    const businessTypesSlideCount =
+      businessTypesSwiperEl.querySelectorAll(".swiper-slide").length;
+    const getBusinessTypesDefaultLayout = () => {
+      const layout = {
+        slidesPerView: 1,
+      };
+
+      if (businessTypesSlideCount === 2) {
+        layout.grid = {
+          rows: 2,
+        };
+      } else if (businessTypesSlideCount >= 3) {
+        layout.grid = {
+          rows: 3,
+        };
+      }
+
+      return layout;
+    };
+    const getBusinessTypesBreakpointLayout = (slidesPerView) => {
+      const layout = {
+        slidesPerView,
+        grid: {
+          rows: 1,
+        },
+      };
+
+      if (businessTypesSlideCount > slidesPerView) {
+        layout.grid.rows = 2;
+      }
+
+      return layout;
+    };
+
+    if (businessTypesPaginationEl) {
+      new Swiper(businessTypesSwiperEl, {
+        ...getBusinessTypesDefaultLayout(),
+        pagination: {
+          el: businessTypesPaginationEl,
+          clickable: true,
+        },
+        breakpoints: {
+          576: getBusinessTypesBreakpointLayout(2),
+          768: getBusinessTypesBreakpointLayout(3),
+        },
+      });
+    }
+  }
 }

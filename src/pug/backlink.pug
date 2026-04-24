@@ -16,49 +16,56 @@ block container
     div(class="hero__gradient")
     .container
       .hero__inner
-        p.js-text(class="hero__eyebrow" ) Backlink chất lượng cao
-        h1.js-text(class="hero__title" )
-          | Xây dựng nền móng&nbsp;
-          br.is-mb
-          span  "Trusted&nbsp;
-          br.is-pc
-          span Source"&nbsp;
-          | cho doanh nghiệp dẫn đầu&nbsp;
-        p.js-text(class="hero__lead")
-          | Sở hữu mạng lưới&nbsp;
-          strong liên kết độc bản, an toàn tuyệt đối
-          | &nbsp;trước mọi đợt cập nhật Google. Đưa Website trở thành&nbsp;
-          strong nguồn tin cậy
-          | &nbsp;số 1 trong ngành.
-        form(action="#")
-          .form-wrap.js-text
-            .form-group.item-2
-              label
-                input(type="text" placeholder="Tên")
-              label
-                input(type="email" placeholder="Email")
-            .form-group.item-2
-              label
-                input(type="text" placeholder="Domain website")
-              label
-                input(type="text" placeholder="SDT")
-            .lead-action
-              button.btn(type="submit")
-                span Nhận hồ sơ năng lực Backlink
-              button.btn(type="submit")
-                span Tư vấn lộ trình Authority
-      figure.js-text(class="hero__team")
-        .hero__img.img--1
+        .hero__content
+          p(class="hero__eyebrow" ) Backlink chất lượng cao
+          h1(class="hero__title" )
+            | Xây dựng nền móng&nbsp;
+            br.is-mb
+            span  "Trusted&nbsp;
+            br.is-pc
+            span Source"&nbsp;
+            | cho doanh nghiệp dẫn đầu&nbsp;
+          p(class="hero__lead")
+            | Sở hữu mạng lưới&nbsp;
+            strong liên kết độc bản, an toàn tuyệt đối
+            | &nbsp;trước mọi đợt cập nhật Google. Đưa Website trở thành&nbsp;
+            strong nguồn tin cậy
+            | &nbsp;số 1 trong ngành.
+          .btn-wrap
+            a.btn.btn--sec(href="#lead-form")
+              span báo giá dịch vụ seo strategy
+              +img("seo/btn.svg")
+          //- form(action="#")
+          //-   .form-wrap
+          //-     .form-group.item-2
+          //-       label
+          //-         input(type="text" placeholder="Tên")
+          //-       label
+          //-         input(type="email" placeholder="Email")
+          //-     .form-group.item-2
+          //-       label
+          //-         input(type="text" placeholder="Domain website")
+          //-       label
+          //-         input(type="text" placeholder="SDT")
+          //-     .lead-action
+          //-       button.btn(type="submit")
+          //-         span Nhận hồ sơ năng lực Backlink
+          //-       button.btn(type="submit")
+          //-         span Tư vấn lộ trình Authority
+        .hero__img
           +img("seo/hero1.png")
-        .hero__img.img--2
-          +img("seo/hero2.png")
-        .hero__img.img--3
-          +img("seo/hero4.png")
-        .hero__img-col
-          .hero__img.img--4
-            +img("seo/hero3.png")
-          .hero__img.img--5
-            +img("seo/hero5.png")
+      //- figure(class="hero__team")
+      //-   .hero__img.img--1
+      //-     +img("seo/hero1.png")
+      //-   .hero__img.img--2
+      //-     +img("seo/hero2.png")
+      //-   .hero__img.img--3
+      //-     +img("seo/hero4.png")
+      //-   .hero__img-col
+      //-     .hero__img.img--4
+      //-       +img("seo/hero3.png")
+      //-     .hero__img.img--5
+      //-       +img("seo/hero5.png")
   section.results.section.results--sec
     .container
       .slider-wrapper.results-grid.js-text.js-result

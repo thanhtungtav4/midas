@@ -311,6 +311,33 @@
         width: 40%;
       }
     }
+    &:has(.hero__content) {
+      .hero__inner {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.2rem;
+        flex-direction: row;
+        align-items: center;
+        @include max(767px) {
+          flex-direction: column;
+        }
+      }
+      .hero__img {
+        position: initial;
+        width: calc(40% - 3.2rem);
+        @include max(767px) {
+          width: 100%;
+        }
+      }
+      .hero__content {
+        width: 60%;
+        @include max(767px) {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 .results.results--sec {

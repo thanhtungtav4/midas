@@ -130,7 +130,13 @@ function watch() {
 // ===== BUILD =====
 const build = gulp.series(
   cleanSource,
-  gulp.parallel(style, html, bundleJS, copyAsset, optimizeImages),
+  gulp.parallel(
+    style,
+    html,
+    bundleJS,
+    copyAsset,
+    // optimizeImages
+  ),
   watch,
 );
 
