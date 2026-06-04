@@ -1051,3 +1051,29 @@
     }
   }
 }
+.p-seo {
+  .hero.hero--sec {
+    .container {
+      max-width: 140rem;
+    }
+    .hero__inner {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // grid-template-rows: repeat(3, 1fr);
+      gap: 1.2rem;
+      @include max(1200px) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+      }
+    }
+    .hero__eyebrow,
+    .hero__title {
+      grid-column: 1 / span 2;
+    }
+    .hero__team {
+      max-width: 124.6rem;
+    }
+  }
+}
